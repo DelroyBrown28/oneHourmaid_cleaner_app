@@ -1,0 +1,140 @@
+body,
+html {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    font-family: 'Lato', sans-serif;
+    background-color: #181717;
+}
+
+@media only screen and (min-width : 320px) {
+
+    /*-----TOP CONTENTS-----*/
+
+    .top_contents {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .account_signin_title {
+        color: #EDC681;
+        font-size: 22px;
+        font-weight: 200;
+    }
+
+    /*-----//  TOP CONTENTS-----*/
+    /*-----SIGN IN FORM-----*/
+
+    .sign_in_form {
+        width: 80%;
+        display: flex;
+        flex-flow: column;
+        margin: auto;
+
+    }
+
+    .signin_inputs {
+        margin-bottom: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+    }
+
+
+    ::-webkit-input-placeholder {
+        /* Edge */
+        color: #fff;
+        opacity: 0.5;
+        font-weight: 300;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+
+    }
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #fff;
+        opacity: 0.5;
+        font-weight: 300;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+
+    }
+
+    ::-moz-placeholder {
+        color: #fff;
+        opacity: 0.5;
+        font-weight: 300;
+        font-size: 0.9em;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+    }
+
+    ::-ms-input-placeholder {
+        color: #fff;
+        opacity: 0.5;
+        font-weight: 300;
+        font-size: 0.9em;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+    }
+
+    ::placeholder {
+        color: #fff;
+        opacity: 0.5;
+        font-weight: 300;
+        font-size: 1.1em;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+    }
+
+    /*-----//  SIGN IN FORM-----*/
+    /*-----ALTERNATIVE SIGN IN BUTTONS-----*/
+
+    .alt_signin_buttons {
+        width: 80%;
+        height: 40%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: flex;
+        flex-flow: column;
+
+    }
+
+    .google_signin_button,
+    .fb_signin_button {
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        margin-bottom: 20px;
+        border: 1px solid #EDC681;
+        outline: none;
+    }
+
+    .google_icon,
+    .fb_icon {
+        height: 25px;
+
+    }
+
+
+    /*-----//  ALTERNATIVE SIGN IN BUTTONS-----*/
+
+
+
+
+}
