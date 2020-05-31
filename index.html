@@ -20,8 +20,14 @@
 
     <!--SIGN IN/UP FORM-->
     <form class="sign_in_form">
-        <input class="signin_inputs" id="email_input" autocomplete="off" type="email" placeholder="Email Address">
-        <input class="signin_inputs" id="password_input" autocomplete="off" type="password" placeholder="Password">
+        <input class="signin_inputs" id="email_input" autocomplete="off" type="email" placeholder="Email Address"
+            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+        <input class="signin_inputs" id="password_input" autocomplete="off" type="password" placeholder="Password"
+            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+        <div class="remember_me_wrap">
+            <input class="remember_me_checkbox"  type="checkbox">
+            <label for="remember_me_label" class="remember_me_label">Remember me...</label>
+        </div>
     </form>
 
     <div class="alt_signin_buttons">

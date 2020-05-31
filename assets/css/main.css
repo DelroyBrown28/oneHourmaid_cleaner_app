@@ -15,6 +15,10 @@ html {
     background-color: #181717;
 }
 
+* {
+    outline: none;
+}
+
 @media only screen and (min-width : 320px) {
 
     /*-----TOP CONTENTS-----*/
@@ -43,20 +47,50 @@ html {
         flex-flow: column;
         margin: auto;
 
+
     }
 
     .signin_inputs {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         height: 30px;
         background-color: transparent;
         border: none;
         border-bottom: 1px solid #fff;
+        color: #fff;
+        text-align: center;
+
+
+    }
+
+    .remember_me_wrap {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .remember_me_label {
+        color: #fff;
+        margin-left: 7px;
+        font-weight: 200;
+        font-size: 12px;
+        
+    }
+
+    .remember_me_checkbox {
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        
+        background-color: transparent;
+        border: 1px solid #EDC681;
+        border-radius: 100px;
+        
     }
 
 
     ::-webkit-input-placeholder {
         /* Edge */
-        color: #fff;
+        color: #EDC681;
         opacity: 0.5;
         font-weight: 300;
         text-align: center;
@@ -66,7 +100,7 @@ html {
 
     :-ms-input-placeholder {
         /* Internet Explorer 10-11 */
-        color: #fff;
+        color: #EDC681;
         opacity: 0.5;
         font-weight: 300;
         text-align: center;
@@ -75,7 +109,7 @@ html {
     }
 
     ::-moz-placeholder {
-        color: #fff;
+        color: #EDC681;
         opacity: 0.5;
         font-weight: 300;
         font-size: 0.9em;
@@ -84,7 +118,7 @@ html {
     }
 
     ::-ms-input-placeholder {
-        color: #fff;
+        color: #EDC681;
         opacity: 0.5;
         font-weight: 300;
         font-size: 0.9em;
@@ -93,7 +127,7 @@ html {
     }
 
     ::placeholder {
-        color: #fff;
+        color: #EDC681;
         opacity: 0.5;
         font-weight: 300;
         font-size: 1.1em;
@@ -113,6 +147,7 @@ html {
         flex-flow: column;
 
     }
+
 
     .google_signin_button,
     .fb_signin_button {
@@ -148,7 +183,6 @@ html {
     /*-----//  ALTERNATIVE SIGN IN BUTTONS-----*/
     /*-----NEXT/SIGN IN BUTTON-----*/
 
-
     #next_btn {
         width: 80%;
         height: 50px;
@@ -161,8 +195,9 @@ html {
         font-weight: 200;
         border-left: 1px solid #EDC681;
         border-right: 1px solid #EDC681;
-
+        transition: 0.1s;
     }
+
 
     /*-----//  NEXT/SIGN IN BUTTON-----*/
 }
@@ -170,8 +205,17 @@ html {
 /*-----HOVERS & SUCH-----*/
 
 .google_signin_button:active,
-.fb_signin_button:active {
+.fb_signin_button:active,
+#next_btn:active {
     border-width: 5px;
+}
+
+.signin_inputs:focus {
+    border-bottom: 1px solid #EDC681;
+}
+
+.remember_me_checkbox:focus {
+    background-color: #EDC681;
 }
 
 /*-----//  HOVERS & SUCH-----*/
