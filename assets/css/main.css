@@ -36,6 +36,7 @@ html {
         color: #EDC681;
         font-size: 22px;
         font-weight: 200;
+        opacity: 0;
     }
 
     /*-----//  TOP CONTENTS-----*/
@@ -53,13 +54,21 @@ html {
     .signin_inputs {
         margin-bottom: 10px;
         height: 40px;
+        width: 70%;
+        align-self: center;
         background-color: transparent;
         border: none;
         border-bottom: 1px solid #fff;
         color: #fff;
         text-align: center;
+        transition: 0.1s;
 
 
+    }
+
+    #email_input,
+    #password_input {
+        opacity: 0;
     }
 
 
@@ -114,7 +123,7 @@ html {
     /*-----ALTERNATIVE SIGN IN BUTTONS-----*/
 
     .alt_signin_buttons {
-        width: 80%;
+        width: 58%;
         height: 40%;
         margin: 0 auto;
         margin-bottom: 0px;
@@ -124,36 +133,19 @@ html {
     }
 
 
-    .google_signin_button,
-    .fb_signin_button {
-        width: 100%;
+    #sign_up_button {
+        width: 600px;
         height: 50px;
         align-self: center;
         background-color: transparent;
         border: none;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #EDC681;
-        border-top: 1px solid #EDC681;
-        outline: none;
+        border-left: 1px solid #EDC681;
+        border-right: 1px solid #EDC681;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
         transition: 0.1s;
-        border-radius: 0px;
-        background: -o-linear-gradient(305deg, #1a1919, #161515);
-        background: linear-gradient(145deg, #1a1919, #161515);
-        -webkit-box-shadow: 5px 5px 0px #161515,
-            -5px -5px 0px #1a1919;
-        box-shadow: 5px 5px 0px #161515,
-            -5px -5px 0px #1a1919;
+        font-weight: 200;
     }
-
-    .fa-google,
-    .fa-facebook-f {
-        font-size: 20px;
-        color: #fff;
-
-    }
-
-
-
 
     /*-----//  ALTERNATIVE SIGN IN BUTTONS-----*/
     /*-----NEXT/SIGN IN BUTTON-----*/
@@ -187,10 +179,14 @@ html {
 
 .signin_inputs:focus {
     border-bottom: 1px solid #EDC681;
+    width: 90%;
 }
 
-.remember_me_checkbox:focus {
-    background-color: #EDC681;
+#sign_up_button:active {
+    opacity: 0.6;
+    width: 80px;
 }
+
+
 
 /*-----//  HOVERS & SUCH-----*/
