@@ -167,6 +167,59 @@ html {
 
 
     /*-----//  NEXT/SIGN IN BUTTON-----*/
+    /*----------CLEANER ACCOUNT PAGE----------*/
+
+    /*-----CLEANERS INFO-----*/
+
+    .avatar_wrap {
+        width: 100%;
+        height: 15%;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .avatar_border {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        border: 1.3px solid #EDC681;
+    }
+
+    #cleaners_avatar {
+        background: url(/assets/images/fake_avatar.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 53px;
+        height: 53px;
+        border-radius: 100px;
+
+    }
+
+    .cleaners_name_wrap {
+        width: 100%;
+        height: 8%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #cleaners_name {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 200;
+        margin: 0;
+    }
+
+    /*-----//  CLEANERS INFO-----*/
+    /*----------//  CLEANER ACCOUNT PAGE----------*/
 }
 
 /*-----HOVERS & SUCH-----*/

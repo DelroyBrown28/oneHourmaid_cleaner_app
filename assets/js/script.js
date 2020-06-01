@@ -11,7 +11,7 @@ $(document).ready(function() {
                     opacity: '1'
                 }, function () {
                     $('#sign_up_button').animate({
-                        width: '60px'
+                        width: '80%'
                     }, function() {
                         $('#sign_up_button').animate({
                             height: '30px'
