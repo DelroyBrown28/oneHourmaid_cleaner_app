@@ -171,13 +171,14 @@ html {
 
     /*-----CLEANERS INFO-----*/
 
-    .avatar_wrap {
+    .cleaners_info_wrap {
         width: 100%;
         height: 15%;
         margin-top: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-flow: column;
 
     }
 
@@ -202,21 +203,27 @@ html {
 
     }
 
-    .cleaners_name_wrap {
-        width: 100%;
-        height: 8%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-
     #cleaners_name {
         color: #fff;
         font-size: 22px;
         font-weight: 200;
-        margin: 0;
+        margin: 5px 0px;
     }
+
+    .account_type {
+        width: 87px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 200;
+        border-radius: 100px;
+        background-color: rgba(237, 197, 129, 0.418);
+        
+    }
+
 
     /*-----//  CLEANERS INFO-----*/
     /*----------//  CLEANER ACCOUNT PAGE----------*/
