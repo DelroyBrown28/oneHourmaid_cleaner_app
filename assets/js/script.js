@@ -32,6 +32,8 @@ $(document).ready(function () {
             }, function () {
                 $('#cleaners_name').animate({
                     bottom: '0'
+                }, function () {
+                    $('.avatar').addClass('transform_rotate');
                 })
             })
         })

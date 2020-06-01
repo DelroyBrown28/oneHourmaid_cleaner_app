@@ -190,14 +190,13 @@ html {
         align-items: center;
         justify-content: center;
         border-radius: 100px;
-        border: 1px solid #EDC681;
+
+        border-left: 1px solid #EDC681;
+        border-right: 1px solid #EDC681;
     }
 
+
     #cleaners_avatar {
-        background: url(/assets/images/fake_avatar.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         width: 50px;
         height: 50px;
         border-radius: 100px;
@@ -205,6 +204,18 @@ html {
         opacity: 0;
 
     }
+
+    .avatar {
+        height: 50px;
+        border-radius: 100px;
+        transform: rotate(90deg);
+    }
+
+    .transform_rotate {
+        transform: rotate(0deg);
+        transition: 0.5s;
+    }
+
 
     #cleaners_name {
         position: relative;
@@ -231,16 +242,17 @@ html {
     }
 
     .cleaner_stats {
-        
+        margin-top: 20px;
         width: 100%;
-        margin-top: 10px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
 
     }
 
-    .number_of_cleans_wrap {
+    .number_of_cleans_wrap,
+    .ratings_wrap {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -248,16 +260,24 @@ html {
 
     }
 
-    #number_of_cleans {
+    #number_of_cleans_text,
+    #ratings_text {
         color: #fff;
         font-size: 10px;
         margin: 0;
     }
 
-    .cleans_number {
+    .cleans_number,
+    .ratings_number {
         color: #fff;
         font-size: 25px;
-        font-weight: 200; 
+        font-weight: 200;
+        display: flex;
+    }
+
+    .star_rating {
+        height: 12px;
+        margin-bottom: 10px;
     }
 
 
