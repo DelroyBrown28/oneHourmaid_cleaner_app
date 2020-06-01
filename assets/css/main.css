@@ -13,6 +13,11 @@ html {
     flex-flow: column;
     font-family: 'Lato', sans-serif;
     background-color: #181717;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 * {
@@ -169,6 +174,109 @@ html {
     /*-----//  NEXT/SIGN IN BUTTON-----*/
     /*----------CLEANER ACCOUNT PAGE----------*/
 
+    .back_button {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        height: 30px;
+    }
+
+    .open_sidemenu {
+        position: absolute;
+        top: 17px;
+        right: 15px;
+        font-size: 1.5em;
+        color: #EDC681;
+    }
+
+
+    /*-----SIDE MENU-----*/
+
+    .side_menu_container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        display: none;
+        
+    }
+
+
+    .side_menu_wrap {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: -150%;
+        display: flex;
+        align-items: center;
+        background-color: #252525;
+
+    }
+
+
+    .side_menu_list {
+        list-style: none;
+        color: #fff;
+        margin: 0;
+        margin-left: 15px;
+        padding: 0;
+
+    }
+
+    .menu_list {
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 200;
+        color: #EDC681;
+    }
+
+    li:nth-child(4) {
+        font-size: 18px;
+        color: #fff;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+
+    .fa-phone-alt,
+    .fa-pound-sign,
+    .fa-exclamation {
+        font-size: 13px;
+    }
+
+
+    .fa-exclamation {
+        color: rgb(255, 80, 80);
+    }
+
+    .back_out_side_menu {
+        position: absolute;
+        width: 120px;
+        height: 50px;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+
+        border-top-right-radius: 100px;
+        background-color: #181717;
+        background: linear-gradient(145deg, #282828, #212121);
+        box-shadow: 5px 5px 24px #0f0f0f,
+            -5px -5px 24px #3b3b3b;
+    }
+
+    .back_text {
+        position: relative;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 200;
+        color: #EDC681;
+    }
+
+    /*-----//  SIDE MENU-----*/
+
+
     /*-----CLEANERS INFO-----*/
 
     .cleaners_info_wrap {
@@ -302,6 +410,7 @@ html {
     opacity: 0.6;
     width: 80px;
 }
+
 
 
 

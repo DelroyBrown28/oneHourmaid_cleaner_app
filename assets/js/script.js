@@ -40,4 +40,23 @@ $(document).ready(function () {
     }
     window.onload = cleanerAppFadeIn
 
+
+    $('.open_sidemenu').click(function () {
+        $('.side_menu_container').fadeIn("fast", function () {
+            $('.side_menu_wrap').animate({
+                right: '-50%'
+            })
+        })
+    })
+
+    $('.back_out_side_menu').click(function () {
+        $('.side_menu_wrap').animate({
+            right: '-150%'
+        }, function () {
+            $('.side_menu_container').fadeOut();
+        })
+    })
+
+
+
 });
