@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    
+$(document).ready(function () {
+
     function fadeInOnLoad() {
         $('.account_signin_title').animate({
             opacity: '1',
@@ -12,7 +12,7 @@ $(document).ready(function() {
                 }, function () {
                     $('#sign_up_button').animate({
                         width: '80%'
-                    }, function() {
+                    }, function () {
                         $('#sign_up_button').animate({
                             height: '30px'
                         })
@@ -22,4 +22,20 @@ $(document).ready(function() {
         })
     }
     window.onload = fadeInOnLoad;
-})
+
+    function cleanerAppFadeIn() {
+        $('#cleaners_avatar').animate({
+            opacity: '1'
+        }, function () {
+            $('.avatar_border').animate({
+                width: '60px'
+            }, function () {
+                $('#cleaners_name').animate({
+                    bottom: '0'
+                })
+            })
+        })
+    }
+    window.onload = cleanerAppFadeIn
+
+});

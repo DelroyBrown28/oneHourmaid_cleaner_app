@@ -172,24 +172,25 @@ html {
     /*-----CLEANERS INFO-----*/
 
     .cleaners_info_wrap {
+        position: relative;
         width: 100%;
-        height: 15%;
         margin-top: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-flow: column;
 
+
     }
 
     .avatar_border {
-        width: 60px;
-        height: 60px;
+        width: 150px;
+        height: 63px;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 100px;
-        border: 1.3px solid #EDC681;
+        border: 1px solid #EDC681;
     }
 
     #cleaners_avatar {
@@ -197,22 +198,27 @@ html {
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        width: 53px;
-        height: 53px;
+        width: 50px;
+        height: 50px;
         border-radius: 100px;
+        /*---opacity set to 0, resets to 1 through JS---*/
+        opacity: 0;
 
     }
 
     #cleaners_name {
+        position: relative;
+        bottom: 120%;
         color: #fff;
         font-size: 22px;
         font-weight: 200;
         margin: 5px 0px;
+
     }
 
     .account_type {
         width: 87px;
-        height: 15px;
+        height: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -221,7 +227,37 @@ html {
         font-weight: 200;
         border-radius: 100px;
         background-color: rgba(237, 197, 129, 0.418);
+
+    }
+
+    .cleaner_stats {
         
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .number_of_cleans_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+
+    }
+
+    #number_of_cleans {
+        color: #fff;
+        font-size: 10px;
+        margin: 0;
+    }
+
+    .cleans_number {
+        color: #fff;
+        font-size: 25px;
+        font-weight: 200; 
     }
 
 
