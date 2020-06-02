@@ -1,27 +1,6 @@
 $(document).ready(function () {
 
-    function fadeInOnLoad() {
-        $('.account_signin_title').animate({
-            opacity: '1',
-        }, function () {
-            $('#email_input').animate({
-                opacity: '1'
-            }, function () {
-                $('#password_input').animate({
-                    opacity: '1'
-                }, function () {
-                    $('#sign_up_button').animate({
-                        width: '80%'
-                    }, function () {
-                        $('#sign_up_button').animate({
-                            height: '30px'
-                        })
-                    })
-                })
-            })
-        })
-    }
-    window.onload = fadeInOnLoad;
+
 
     function cleanerAppFadeIn() {
         $('#cleaners_avatar').animate({
@@ -42,9 +21,12 @@ $(document).ready(function () {
 
 
     $('.open_sidemenu').click(function () {
+        $(this).addClass('skippy');
         $('.side_menu_container').fadeIn("fast", function () {
             $('.side_menu_wrap').animate({
                 right: '-50%'
+            }, function () {
+                $('.open_sidemenu').fadeOut('slow');
             })
         })
     })
