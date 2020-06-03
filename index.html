@@ -7,38 +7,36 @@
     <title>oneHourmaid - Cleaner App</title>
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-
     <!--TOP CONTENTS-->
     <div class="top_contents">
-        <h1 class="account_signin_title">Sign in to your account.</h1>
+        <h1 class="main_title">Sign in to your account</h1>
     </div>
     <!--// TOP CONTENTS-->
 
-    <!--SIGN IN/UP FORM-->
+    <!--SIGN IN FORM-->
     <form class="sign_in_form">
-        <input class="signin_inputs" id="email_input" autocomplete="off" type="email" placeholder="Email Address"
-            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
-        <input class="signin_inputs" id="password_input" autocomplete="off" type="password" placeholder="Password"
-            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+        <input type="email" id="email_input" placeholder="Email Address"></input>
+        <input type="password" id="password_input" placeholder="Password"></input>
+        <div class="sign_up_wrap">
+            <p class="sign_up">Register</p>
+        </div>
     </form>
+    <!--// SIGN IN FORM-->
 
-    <div class="alt_signin_buttons">
+    <!--SIGN IN BUTTON-->
+    
+    <div class="sign_in_btn_wrap">
+        <button id="sign_in_button">Sign in</button>
+        <div class="buttonclickstyle"></div>
 
-        <button id="sign_up_button">Sign up</button>
     </div>
-    <!--// SIGN IN/UP FORM-->
-
-    <!--NEXT/SIGN IN BUTTON-->
-
-    <button id="next_btn" onclick="location.href = 'cleaner_account.html'">Sign in</button>
-
-
-    <!--// NEXT/SIGN IN BUTTON-->
-
+    
+    <!--// SIGN IN BUTTON-->
 
     <script src="./assets/js/jquery-3.5.1.min.js"></script>
     <script src="./assets/js/script.js"></script>

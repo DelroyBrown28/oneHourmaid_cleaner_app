@@ -24,7 +24,7 @@ $(document).ready(function () {
         $(this).addClass('skippy');
         $('.side_menu_container').fadeIn("fast", function () {
             $('.side_menu_wrap').animate({
-                right: '-50%'
+                right: '0%'
             }, function () {
                 $('.open_sidemenu').fadeOut('slow');
             })
@@ -32,6 +32,8 @@ $(document).ready(function () {
     })
 
     $('.back_out_side_menu').click(function () {
+        $('.open_sidemenu').removeClass('skippy');
+        $('.open_sidemenu').fadeIn('slow');
         $('.side_menu_wrap').animate({
             right: '-150%'
         }, function () {
@@ -39,6 +41,16 @@ $(document).ready(function () {
         })
     })
 
+
+    // SIGN IN PAGE SIGN IN BUTTON
+
+    $('#sign_in_button').click(function () {
+        $('.buttonclickstyle').animate({
+            width: '100%'
+        }, 200, function () {
+            location.href = "cleaner_account.html";
+        })
+    })
 
 
 });

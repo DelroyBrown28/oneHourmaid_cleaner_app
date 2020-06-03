@@ -13,7 +13,7 @@ html {
     flex-flow: column;
     font-family: 'Lato', sans-serif;
     background-color: #181717;
-    
+
 }
 
 ::-webkit-scrollbar {
@@ -22,10 +22,13 @@ html {
 
 * {
     outline: none;
+
 }
 
 @media only screen and (min-width : 320px) {
 
+
+    /*----------MAIN SIGN IN PAGE----------*/
     /*-----TOP CONTENTS-----*/
 
     .top_contents {
@@ -37,139 +40,131 @@ html {
 
     }
 
-    .account_signin_title {
+    .main_title {
         color: #EDC681;
         font-size: 22px;
-        font-weight: 200;
+        font-weight: 300;
     }
 
     /*-----//  TOP CONTENTS-----*/
     /*-----SIGN IN FORM-----*/
 
     .sign_in_form {
-        width: 80%;
+        height: 70%;
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-flow: column;
-        margin: auto;
-
-
-    }
-
-    .signin_inputs {
-        margin-bottom: 10px;
-        height: 40px;
-        width: 70%;
-        align-self: center;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #fff;
-        color: #fff;
-        text-align: center;
-        transition: 0.1s;
-
 
     }
 
     #email_input,
     #password_input {
+        width: 78%;
+        height: 35px;
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        font-size: 18px;
+
+    }
+
+    #password_input {
+        margin: 25px 0px 0px;
     }
 
 
     ::-webkit-input-placeholder {
-        /* Edge */
-        color: #EDC681;
-        opacity: 0.5;
-        font-weight: 300;
+        /* Chrome/Opera/Safari */
+        color: #fff;
         text-align: center;
-        font-family: 'Lato', sans-serif;
-
-    }
-
-    :-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: #EDC681;
-        opacity: 0.5;
-        font-weight: 300;
-        text-align: center;
-        font-family: 'Lato', sans-serif;
+        opacity: 0.7;
+        font-size: 15px;
 
     }
 
     ::-moz-placeholder {
-        color: #EDC681;
-        opacity: 0.5;
-        font-weight: 300;
-        font-size: 0.9em;
+        /* Firefox 19+ */
+        color: #fff;
         text-align: center;
-        font-family: 'Lato', sans-serif;
+        opacity: 0.7;
+        font-size: 15px;
+
     }
 
-    ::-ms-input-placeholder {
-        color: #EDC681;
-        opacity: 0.5;
-        font-weight: 300;
-        font-size: 0.9em;
+    :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #fff;
         text-align: center;
-        font-family: 'Lato', sans-serif;
+        opacity: 0.7;
+        font-size: 15px;
+
     }
 
-    ::placeholder {
-        color: #EDC681;
-        opacity: 0.5;
-        font-weight: 300;
-        font-size: 1.1em;
+    :-moz-placeholder {
+        /* Firefox 18- */
+        color: #fff;
         text-align: center;
-        font-family: 'Lato', sans-serif;
+        opacity: 0.7;
+        font-size: 15px;
+
+    }
+
+    .sign_up_wrap {
+        width: 150px;
+        height: 30px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #EDC681;
+        border-radius: 100px;
+    }
+
+    .sign_up {
+        color: #000;
     }
 
     /*-----//  SIGN IN FORM-----*/
-    /*-----ALTERNATIVE SIGN IN BUTTONS-----*/
 
-    .alt_signin_buttons {
-        width: 58%;
-        height: 40%;
-        margin: 0 auto;
-        margin-bottom: 0px;
+    /*-----SIGN IN BUTTON-----*/
+    
+    
+    .sign_in_btn_wrap {
+        height: 15%;
+        width: 100%;
         display: flex;
-        flex-flow: column;
+        align-items: center;
+        justify-content: center;
 
     }
 
-
-    #sign_up_button {
-        width: 70%;
-        height: 50px;
-        align-self: center;
-        background-color: transparent;
+    #sign_in_button {
+        width: 100%;
+        height: 100%;
         border: none;
-        border-left: 1px solid #EDC681;
-        border-right: 1px solid #EDC681;
-        color: rgb(255, 255, 255);
-        font-size: 12px;
-        transition: 0.1s;
-        font-weight: 200;
-    }
-
-    /*-----//  ALTERNATIVE SIGN IN BUTTONS-----*/
-    /*-----NEXT/SIGN IN BUTTON-----*/
-
-    #next_btn {
-        width: 80%;
-        height: 50px;
-        margin: 0 auto;
-        margin-bottom: 30px;
+        font-size: 18px;
+        font-weight: 300;
         background-color: transparent;
-        border: none;
         color: #EDC681;
-        font-size: 1.1em;
-        font-weight: 200;
-        border-left: 1px solid #EDC681;
-        border-right: 1px solid #EDC681;
-        transition: 0.1s;
+        z-index: 1;
+    } 
+
+    .buttonclickstyle {
+        position: absolute;
+        background-color: rgba(237, 197, 129, 0.267);
+        width: 0%;
+        height: 15%;
+        left: 0;
     }
 
 
-    /*-----//  NEXT/SIGN IN BUTTON-----*/
+    
+    /*-----//  SIGN IN BUTTON-----*/
+
+    /*----------//  MAIN SIGN IN PAGE----------*/
     /*----------CLEANER ACCOUNT PAGE----------*/
 
 
@@ -194,17 +189,18 @@ html {
         position: absolute;
         width: 100%;
         height: 100%;
-
         display: none;
-        
+
+
+
     }
 
 
     .side_menu_wrap {
         position: absolute;
-        width: 100%;
+        width: 50%;
         height: 100%;
-        right: -150%;
+        right: 0%;
         z-index: 1;
         overflow: hidden;
         display: flex;
