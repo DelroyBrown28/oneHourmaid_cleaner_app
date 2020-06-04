@@ -55,6 +55,17 @@ $(document).ready(function () {
         })
     })
 
+    // REGISTER PAGE REGISTER BUTTON
+
+    $('#register_button').click(function () {
+        $('.buttonclickstyle_two').animate({
+            width: '100%'
+        }, 200, function () {
+            location.href = "#";
+        })
+    })
+
+
 
     // TOGGLES PASSWORD VIEW ON SIGN IN PAGE
 
