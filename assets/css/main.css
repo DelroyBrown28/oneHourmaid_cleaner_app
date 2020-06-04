@@ -25,6 +25,7 @@ html {
 
 }
 
+
 @media only screen and (min-width : 320px) {
 
 
@@ -68,11 +69,40 @@ html {
         border-bottom: 1px solid #fff;
         color: #fff;
         font-size: 18px;
+        transition: 2s;
 
     }
 
     #password_input {
+        display: flex;
         margin: 25px 0px 0px;
+
+    }
+
+    .show_hide_pw {
+        position: absolute;
+        margin-top: 8.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        right: 33px;
+        width: 45px;
+        height: 35px;
+
+    }
+
+    .show_password,
+    .hide_password {
+        position: absolute;
+        color: #EDC681;
+        margin: 0;
+        font-weight: 300;
+        font-size: 0.7em;
+    }
+
+    .hide_password {
+        display: none;
     }
 
 
@@ -130,8 +160,8 @@ html {
     /*-----//  SIGN IN FORM-----*/
 
     /*-----SIGN IN BUTTON-----*/
-    
-    
+
+
     .sign_in_btn_wrap {
         height: 15%;
         width: 100%;
@@ -141,7 +171,7 @@ html {
 
     }
 
-    #sign_in_button {
+    .sign_in_button {
         width: 100%;
         height: 100%;
         border: none;
@@ -150,7 +180,7 @@ html {
         background-color: transparent;
         color: #EDC681;
         z-index: 1;
-    } 
+    }
 
     .buttonclickstyle {
         position: absolute;
@@ -161,7 +191,7 @@ html {
     }
 
 
-    
+
     /*-----//  SIGN IN BUTTON-----*/
 
     /*----------//  MAIN SIGN IN PAGE----------*/

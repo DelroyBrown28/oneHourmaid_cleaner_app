@@ -44,12 +44,30 @@ $(document).ready(function () {
 
     // SIGN IN PAGE SIGN IN BUTTON
 
-    $('#sign_in_button').click(function () {
+    $('.sign_in_button').click(function () {
         $('.buttonclickstyle').animate({
             width: '100%'
         }, 200, function () {
             location.href = "cleaner_account.html";
         })
+    })
+
+
+    // TOGGLES PASSWORD VIEW ON SIGN IN PAGE
+
+    $('.show_password').click(function () {
+        $(this).fadeOut('slow', function () {
+            $('.hide_password').fadeIn();
+        })
+        $('#password_input').attr('type', 'text');
+    })
+
+    $('.hide_password').click(function () {
+        $(this).fadeOut('slow', function () {
+            $('.show_password').fadeIn();
+        })
+        $('#password_input').attr('type', 'password');
+
     })
 
 
