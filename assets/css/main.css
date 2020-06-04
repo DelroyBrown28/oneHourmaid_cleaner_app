@@ -221,10 +221,7 @@ html {
         height: 100%;
         display: none;
 
-
-
     }
-
 
     .side_menu_wrap {
         position: absolute;
@@ -301,8 +298,6 @@ html {
     }
 
     /*-----//  SIDE MENU-----*/
-
-
     /*-----CLEANERS INFO-----*/
 
     .cleaners_info_wrap {
@@ -416,6 +411,70 @@ html {
 
 
     /*-----//  CLEANERS INFO-----*/
+    /*-----BOOKING DATES & CALENDAR-----*/
+
+
+    .calendar_wrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #myCalendar {
+        height: 80%;
+        width: 80%;
+        background-color: #181717;
+        color: #fff;
+        font-weight: 200;
+        border: none;
+        opacity: 0.3;
+
+    }
+
+    .neumorphize {
+        opacity: 1 !important;
+        transition: 1s;
+        border-radius: 0px;
+        background: linear-gradient(145deg, #1a1919, #161515);
+        box-shadow: 9px 9px 11px #161515,
+            -9px -9px 11px #1a1919;
+
+    }
+
+    .vanilla-calendar .vanilla-calendar-date--today {
+        color: #EDC681;
+
+    }
+
+    .vanilla-calendar-date--active {
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+
+    .vanilla-calendar-date {
+        color: #fff;
+        font-size: 0.8em;
+        background-color: #181717 !important;
+    }
+
+    .vanilla-calendar-week {
+        color: #000;
+        font-size: 0.8em;
+        background-color: transparent !important;
+
+    }
+
+    .calnder_bg_color {
+        background-color: #fff !important;
+        color: #000 !important;
+    }
+
+
+
+    /*-----//  BOOKING DATES & CALENDAR-----*/
     /*----------//  CLEANER ACCOUNT PAGE----------*/
 }
 
@@ -436,6 +495,8 @@ html {
     opacity: 0.6;
     width: 80px;
 }
+
+
 
 
 

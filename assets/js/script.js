@@ -16,6 +16,9 @@ $(document).ready(function () {
                 })
             })
         })
+        setTimeout(function () {
+            $('#myCalendar').addClass('neumorphize');
+        }, 1800);
     }
     window.onload = cleanerAppFadeIn
 
@@ -61,13 +64,23 @@ $(document).ready(function () {
         })
         $('#password_input').attr('type', 'text');
     })
-
     $('.hide_password').click(function () {
         $(this).fadeOut('slow', function () {
             $('.show_password').fadeIn();
         })
         $('#password_input').attr('type', 'password');
 
+    })
+
+
+    // CALENDAR FOR CLEANER ACCOUNT PAGE
+
+    let myCalendar = new VanillaCalendar({
+        selector: "#myCalendar"
+    })
+
+    $('.vanilla-calendar-date').click(function() {
+        $(this).addClass('calnder_bg_color');
     })
 
 
