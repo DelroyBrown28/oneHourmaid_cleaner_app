@@ -25,6 +25,10 @@ html {
 
 }
 
+.gold_text {
+    color: #EDC681;
+}
+
 
 @media only screen and (min-width : 320px) {
 
@@ -476,8 +480,8 @@ html {
         justify-content: center;
         border-radius: 100px;
 
-        border-left: 1px solid #EDC681;
-        border-right: 1px solid #EDC681;
+        border: 1.5px solid #EDC681;
+
     }
 
 
@@ -576,6 +580,8 @@ html {
         align-items: center;
         justify-content: center;
 
+        display: none;
+
     }
 
     #myCalendar {
@@ -631,6 +637,49 @@ html {
 
 
     /*-----//  BOOKING DATES & CALENDAR-----*/
+    /*-----OPTIONS FOR CLEANER-----*/
+
+
+    .options_wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-flow: column;
+
+    }
+
+
+    #open_calendar_btn,
+    #jobs_btn,
+    #go_live_btn {
+        width: 85%;
+        height: 50px;
+        background-color: #242222;
+        border: none;
+        color: #fff;
+        font-size: 1.1em;
+        font-weight: 100;
+    }
+
+    #go_live_btn {
+        border: 1px solid #EDC681;
+        background-color: transparent;
+        color: #fff;
+        font-weight: 200;
+    }
+
+
+    .calendar_icon {
+        height: 20px;
+    }
+
+
+
+
+
+    /*-----//  OPTIONS FOR CLEANER-----*/
     /*----------//  CLEANER ACCOUNT PAGE----------*/
 }
 
