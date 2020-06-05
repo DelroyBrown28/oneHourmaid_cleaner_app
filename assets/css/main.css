@@ -575,18 +575,21 @@ html {
 
 
     .calendar_wrap {
+        position: relative;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: auto;
 
         display: none;
 
     }
 
     #myCalendar {
-        height: 80%;
+        height: 85%;
         width: 80%;
+        margin-top: 35px;
         background-color: #181717;
         color: #fff;
         font-weight: 200;
@@ -640,7 +643,8 @@ html {
     /*-----OPTIONS FOR CLEANER-----*/
 
 
-    .options_wrap {
+    .options_wrap,
+    .options_fade_wrap {
         width: 100%;
         height: 100%;
         display: flex;
@@ -668,6 +672,24 @@ html {
         background-color: transparent;
         color: #fff;
         font-weight: 200;
+    }
+
+    .close_button_wrap {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 38%;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        display: none;
+
+    }
+
+    .close_button {
+        height: 30px;
     }
 
 
@@ -710,6 +732,10 @@ html {
 
 #tools_input:focus {
     background-color: rgba(237, 197, 129, 0.479);
+}
+
+#open_calendar_btn:active {
+    opacity: 0.7;
 }
 
 
