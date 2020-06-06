@@ -113,5 +113,19 @@ $(document).ready(function () {
         })
     })
 
+    // SHOW PENDING JOBS
+
+    $('#jobs_btn').click(function () {
+        $('.options_fade_wrap').fadeOut('fast', function () {
+            $('.pending_jobs_fadein_wrap').fadeIn();
+        })
+    })
+
+    $('.close_button_pending_jobs').click(function () {
+        $('.pending_jobs_fadein_wrap').fadeOut('fast', function () {
+            $('.options_fade_wrap').fadeIn();
+        });
+    })
+
 
 });
