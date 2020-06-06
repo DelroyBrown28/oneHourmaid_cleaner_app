@@ -712,7 +712,7 @@ html {
     }
 
 
-    #pending_job {
+    .pending_job {
         width: 85%;
         height: 50px;
         display: flex;
