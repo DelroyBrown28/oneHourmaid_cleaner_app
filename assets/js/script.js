@@ -47,7 +47,7 @@ $(document).ready(function () {
 
     // SIGN IN PAGE SIGN IN BUTTON
 
-    $('.sign_in_button').click(function () {
+    $('#sign_in_button').click(function () {
         $('.buttonclickstyle').animate({
             width: '100%'
         }, 200, function () {
@@ -70,11 +70,16 @@ $(document).ready(function () {
     // TOGGLES PASSWORD VIEW ON SIGN IN PAGE
 
     $('.show_password').click(function () {
+        let PWInput = document.getElementById('password_input').value;
+        if (PWInput == "") {
+            return // stops toggle if input is empty
+        }
         $(this).fadeOut('slow', function () {
             $('.hide_password').fadeIn();
         })
         $('#password_input').attr('type', 'text');
     })
+
     $('.hide_password').click(function () {
         $(this).fadeOut('slow', function () {
             $('.show_password').fadeIn();
@@ -82,6 +87,7 @@ $(document).ready(function () {
         $('#password_input').attr('type', 'password');
 
     })
+
 
 
     // CALENDAR FOR CLEANER ACCOUNT PAGE
