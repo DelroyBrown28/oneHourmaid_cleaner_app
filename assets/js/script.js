@@ -134,4 +134,162 @@ $(document).ready(function () {
     })
 
 
+    //bounceJS for slide down menu items
+    $('.contact').click(function () {
+
+        var bounce = new Bounce();
+        bounce
+            .rotate({
+                from: 0,
+                to: 0,
+                duration: 3000,
+                stiffness: 1
+            })
+            .scale({
+                from: {
+                    x: 1,
+                    y: 1
+                },
+                to: {
+                    x: 0.5,
+                    y: 0.5
+                },
+                easing: "sway",
+                duration: 3000,
+                delay: 65,
+                stiffness: 1
+            })
+            .translate({
+                from: {
+                    x: 0,
+                    y: 0
+                },
+                to: {
+                    x: 0,
+                    y: 0
+                },
+                easing: "bounce",
+                duration: 3000,
+                delay: 30,
+            })
+
+            .applyTo(document.querySelectorAll(".contact"));
+
+    })
+
+    $('.payments').click(function () {
+
+        var bounce = new Bounce();
+        bounce
+            .rotate({
+                from: 0,
+                to: 0,
+                duration: 3000,
+                stiffness: 1
+            })
+            .scale({
+                from: {
+                    x: 1,
+                    y: 1
+                },
+                to: {
+                    x: 0.5,
+                    y: 0.5
+                },
+                easing: "sway",
+                duration: 3000,
+                delay: 65,
+                stiffness: 1
+            })
+            .translate({
+                from: {
+                    x: 0,
+                    y: 0
+                },
+                to: {
+                    x: 0,
+                    y: 0
+                },
+                easing: "bounce",
+                duration: 3000,
+                delay: 30,
+            })
+
+            .applyTo(document.querySelectorAll(".payments"));
+
+    })
+
+    $('.issues').click(function () {
+
+        var bounce = new Bounce();
+        bounce
+            .rotate({
+                from: 0,
+                to: 0,
+                duration: 3000,
+                stiffness: 1
+            })
+            .scale({
+                from: {
+                    x: 1,
+                    y: 1
+                },
+                to: {
+                    x: 0.5,
+                    y: 0.5
+                },
+                easing: "sway",
+                duration: 3000,
+                delay: 65,
+                stiffness: 1
+            })
+            .translate({
+                from: {
+                    x: 0,
+                    y: 0
+                },
+                to: {
+                    x: 0,
+                    y: 0
+                },
+                easing: "bounce",
+                duration: 3000,
+                delay: 30,
+            })
+
+            .applyTo(document.querySelectorAll(".issues"));
+
+    })
+
+    //SLIDE DOWN MENU
+
+    $('.show_menu').click(function () {
+        $('.full_menu').css('backgroundColor', '#ffffff');
+        $('.show_menu').fadeOut('fast', function () {
+            $('.full_menu').animate({
+                height: '100%'
+            }, function () {
+                $('.menu_list').show('fast', function () {
+                    $('.cross_icon').fadeIn('slow');
+                });
+            })
+        })
+    })
+
+    $('.cross_icon').click(function () {
+        $(this).fadeOut('fast', function () {
+            $('.menu_list').fadeOut('fast', function () {
+                $('.full_menu').animate({
+                    height: '20px'
+                }, 200, function () {
+                    $('.full_menu').css('backgroundColor', '#181717');
+                    $('.show_menu').fadeIn();
+                })
+            })
+        })
+    })
+
+
+
+
 });
