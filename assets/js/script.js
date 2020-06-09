@@ -48,6 +48,10 @@ $(document).ready(function () {
     // SIGN IN PAGE SIGN IN BUTTON
 
     $('#sign_in_button').click(function () {
+        let signInButton = document.getElementById('email_input').value;
+        if(signInButton = "") {
+            return false;
+        }
         $('.buttonclickstyle').animate({
             width: '100%'
         }, 200, function () {
