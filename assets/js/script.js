@@ -269,7 +269,8 @@ $(document).ready(function () {
         $('.full_menu').css('backgroundColor', '#EBFCFF');
         $('.show_menu').fadeOut('fast', function () {
             $('.full_menu').animate({
-                height: '100%'
+                height: '100%',
+                width: '100%'
             }, function () {
                 $('.menu_list').show('fast', function () {
                     $('.cross_icon').fadeIn('slow');

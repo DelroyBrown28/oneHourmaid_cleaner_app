@@ -733,6 +733,34 @@ html {
     .show_hide_pw {
         margin-right: 2px;
     }
+
+    /*---SLIDE DOWN MENU ON CLEANER ACCOUNT PAGE---*/
+   
+    .menu_list {
+        height: 70%;
+
+    }
+
+    .contact,
+    .payments,
+    .issues,
+    .sign_out {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        align-items: center;
+        font-size: 1.5em;
+        font-weight: 200;
+        margin-top: 40px;
+
+    }
+
+    .sign_out {
+        width: 50%;
+        height: 30px;
+    }
+
+
 }
 
 @media only screen and (min-width: 414px) {
