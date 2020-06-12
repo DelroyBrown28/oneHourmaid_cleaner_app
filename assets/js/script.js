@@ -160,7 +160,6 @@ $(document).ready(function () {
                 },
                 easing: "sway",
                 duration: 3000,
-                delay: 65,
                 stiffness: 1
             })
             .translate({
@@ -174,7 +173,6 @@ $(document).ready(function () {
                 },
                 easing: "bounce",
                 duration: 3000,
-                delay: 30,
             })
 
             .applyTo(document.querySelectorAll(".contact"));
@@ -268,7 +266,7 @@ $(document).ready(function () {
     //SLIDE DOWN MENU
 
     $('.show_menu').click(function () {
-        $('.full_menu').css('backgroundColor', '#ffffff');
+        $('.full_menu').css('backgroundColor', '#EBFCFF');
         $('.show_menu').fadeOut('fast', function () {
             $('.full_menu').animate({
                 height: '100%'
@@ -286,7 +284,7 @@ $(document).ready(function () {
                 $('.full_menu').animate({
                     height: '20px'
                 }, 200, function () {
-                    $('.full_menu').css('backgroundColor', '#181717');
+                    $('.full_menu').css('backgroundColor', '#15222A');
                     $('.show_menu').fadeIn();
                 })
             })
