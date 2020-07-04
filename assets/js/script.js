@@ -49,7 +49,7 @@ $(document).ready(function () {
 
     $('#sign_in_button').click(function () {
         let signInButton = document.getElementById('email_input').value;
-        if(signInButton = "") {
+        if (signInButton = "") {
             return false;
         }
         $('.buttonclickstyle').animate({
@@ -92,36 +92,6 @@ $(document).ready(function () {
 
     })
 
-
-
-    // CALENDAR FOR CLEANER ACCOUNT PAGE
-
-    let myCalendar = new VanillaCalendar({
-        selector: "#myCalendar"
-    })
-
-    $('.vanilla-calendar-date').click(function () {
-        $(this).addClass('calnder_bg_color');
-    })
-
-
-    // SHOW CALENDAR BUTTON
-
-    $('#open_calendar_btn').click(function () {
-        $('.options_fade_wrap').fadeOut('fast', function () {
-            $('.calendar_wrap').fadeIn('fast', function () {
-                $('.close_button_wrap').fadeIn();
-            });
-        });
-    })
-
-    $('.close_button_wrap').click(function () {
-        $(this).fadeOut('fast', function () {
-            $('.calendar_wrap').fadeOut('fast', function () {
-                $('.options_fade_wrap').fadeIn();
-            })
-        })
-    })
 
     // SHOW PENDING JOBS
 
@@ -287,6 +257,40 @@ $(document).ready(function () {
                 }, 200, function () {
                     $('.full_menu').css('backgroundColor', '#15222A');
                     $('.show_menu').fadeIn();
+                })
+            })
+        })
+    })
+
+    // Register form
+
+    $('.name_tab').click(function () {
+        $('.register_tabs').animate({
+            opacity: '0'
+        }, function () {
+            $('#name_input').animate({
+                opacity: '1'
+            }, function () {
+                $('#save_info').animate({
+                    opacity: '1'
+                })
+            })
+        })
+    })
+
+    $('#save_info').click(function () {
+        document.getElementById('save_info').innerHTML = "Saved!";
+    })
+
+    $('#save_info').click(function () {
+        $(this).animate({
+            opacity: '0'
+        }, function () {
+            $('#name_input').animate({
+                opacity: '0'
+            }, function () {
+                $('.register_tabs').animate({
+                    opacity: '1'
                 })
             })
         })

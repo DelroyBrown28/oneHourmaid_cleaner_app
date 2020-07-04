@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+        type="text/css">
 
 </head>
 
@@ -22,9 +24,15 @@
     <!--REGISTER TABS-->
     <div class="register_tab_wrap">
         <div class="register_tabs name_tab">Name</div>
+        <input id="name_input" type="text" placeholder="Full name" onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Full name'">
         <div class="register_tabs address_tab">Address</div>
         <div class="register_tabs tools_tab">Tools</div>
         <div class="register_tabs vehicle_tab">Vehicle Details</div>
+
+        <button id="save_info">Save
+            <i class="far fa-check-circle"></i>
+        </button>
     </div>
     <!--// REGISTER TABS-->
 

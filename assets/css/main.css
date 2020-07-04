@@ -253,20 +253,53 @@ html {
 
     }
 
+    #name_input {
+        position: absolute;
+        top: 14%;
+        width: 60%;
+        height: 30px;
+        background-color: #1817177e;
+        border: none;
+        color: #fff;
+        text-align: center;
+
+        opacity: 0;
+    }
+
+    #save_info {
+        position: absolute;
+        top: 22%;
+        width: 100px;
+        height: 30px;   
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #181717;
+        border: none;
+        color: #EDC681;
+
+        opacity: 0;
+    }
+
+    .fa-check-circle {
+        display: none !important;
+    }
+
     /*-----//  REGISTER TABS-----*/
     /*-----BOTTOM CONTENTS-----*/
     .register_btn_wrap {
         height: 15%;
         width: 100%;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
 
+    
     }
 
     .register_btn {
         width: inherit;
-        height: 100%;
+        height: 75%;
         background-color: #181717;
         border: none;
         color: #fff;
