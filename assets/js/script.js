@@ -283,7 +283,7 @@ $(document).ready(function () {
     })
 
     $('#save_info').click(function () {
-        $(this).animate({
+        $(this).delay(500).animate({
             opacity: '0'
         }, function () {
             $('#name_input').animate({
@@ -296,6 +296,47 @@ $(document).ready(function () {
         })
     })
 
+        //bounceJS for slide down menu items
+        $('.name_tab').click(function () {
+
+            var bounce = new Bounce();
+            bounce
+                .rotate({
+                    from: 0,
+                    to: 0,
+                    duration: 3000,
+                    stiffness: 1
+                })
+                .scale({
+                    from: {
+                        x: 1,
+                        y: 1
+                    },
+                    to: {
+                        x: 0.5,
+                        y: 0.5
+                    },
+                    easing: "sway",
+                    duration: 3000,
+                    stiffness: 1
+                })
+                .translate({
+                    from: {
+                        x: 0,
+                        y: 0
+                    },
+                    to: {
+                        x: 0,
+                        y: 0
+                    },
+                    easing: "bounce",
+                    duration: 3000,
+                })
+    
+                .applyTo(document.querySelectorAll(".name_tab"));
+    
+        })
+    
 
 
 
