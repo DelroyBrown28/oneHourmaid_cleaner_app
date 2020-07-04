@@ -254,7 +254,8 @@ html {
     }
 
     #name_input,
-    #address_input {
+    #address_input,
+    #password_input_register {
         position: absolute;
         top: 14%;
         width: 60%;
@@ -267,8 +268,9 @@ html {
         display: none;
     }
 
-    #save_info,
-    #save_info_address {
+    #save_info_name,
+    #save_info_address,
+    #save_info_password {
         position: absolute;
         top: 22%;
         width: 100px;

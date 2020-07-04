@@ -262,22 +262,24 @@ $(document).ready(function () {
         })
     })
 
-
     // Opens input field for "Name" on register page
     $('.name_tab').click(function () {
         $('.register_tabs').animate({
             opacity: '0'
         }, function () {
             $('#name_input').fadeIn('fast', function () {
-                $('#save_info').fadeIn('slow');
+                $('#save_info_name').fadeIn('slow');
             });
         })
     })
 
-    // Saves name input
-    $('#save_info').click(function () {
-        document.getElementById('save_info').innerHTML = 'Saved!';
-        $('#save_info').delay(500).fadeOut('fast', function () {
+    // Saves "name" input value to localStorage
+    document.getElementById('save_info_name').addEventListener('click', function () {
+
+        let nameInput = document.getElementById('name_input').value;
+        localStorage.setItem('nameKey', nameInput);
+        document.getElementById('save_info_name').innerHTML = 'Saved!';
+        $('#save_info_name').delay(500).fadeOut('fast', function () {
             $('#name_input').fadeOut('fast', function () {
                 $('.register_tabs').animate({
                     opacity: '1'
@@ -297,8 +299,12 @@ $(document).ready(function () {
         })
     })
 
-    // Saves address input
-    $('#save_info_address').click(function () {
+
+    // Saves "address" input value to localStorage
+    document.getElementById('save_info_address').addEventListener('click', function () {
+
+        let addressInput = document.getElementById('address_input').value;
+        localStorage.setItem('addressKey', addressInput);
         document.getElementById('save_info_address').innerHTML = 'Saved!';
         $('#save_info_address').delay(500).fadeOut('fast', function () {
             $('#address_input').fadeOut('fast', function () {
@@ -309,9 +315,36 @@ $(document).ready(function () {
         });
     })
 
+    // Opens input field for "password" on register page
+    $('.password_tab').click(function () {
+        $('.register_tabs').animate({
+            opacity: '0'
+        }, function () {
+            $('#password_input_register').fadeIn('fast', function () {
+                $('#save_info_password').fadeIn('slow');
+            });
+        })
+    })
+
+    // Saves "password" input value to localStorage
+    document.getElementById('save_info_password').addEventListener('click', function () {
+
+        let passwordInput = document.getElementById('password_input_register').value;
+        localStorage.setItem('passwordKey', passwordInput);
+        document.getElementById('save_info_password').innerHTML = 'Saved!';
+        $('#save_info_password').delay(500).fadeOut('fast', function () {
+            $('#password_input_register').fadeOut('fast', function () {
+                $('.register_tabs').animate({
+                    opacity: '1'
+                });
+            });
+        });
+    })
 
 
-    //bounceJS for name input
+
+
+    //bounceJS for name tab
     $('.name_tab').click(function () {
 
         var bounce = new Bounce();
@@ -351,52 +384,88 @@ $(document).ready(function () {
             .applyTo(document.querySelectorAll(".name_tab"));
 
     })
-    
-        //bounceJS for address input
-        $('.address_tab').click(function () {
 
-            var bounce = new Bounce();
-            bounce
-                .rotate({
-                    from: 0,
-                    to: 0,
-                    duration: 3000,
-                    stiffness: 1
-                })
-                .scale({
-                    from: {
-                        x: 1,
-                        y: 1
-                    },
-                    to: {
-                        x: 0.5,
-                        y: 0.5
-                    },
-                    easing: "sway",
-                    duration: 3000,
-                    stiffness: 1
-                })
-                .translate({
-                    from: {
-                        x: 0,
-                        y: 0
-                    },
-                    to: {
-                        x: 0,
-                        y: 0
-                    },
-                    easing: "bounce",
-                    duration: 3000,
-                })
-    
-                .applyTo(document.querySelectorAll(".address_tab"));
-    
-        })
-    
+    //bounceJS for address tab
+    $('.address_tab').click(function () {
 
-    
+        var bounce = new Bounce();
+        bounce
+            .rotate({
+                from: 0,
+                to: 0,
+                duration: 3000,
+                stiffness: 1
+            })
+            .scale({
+                from: {
+                    x: 1,
+                    y: 1
+                },
+                to: {
+                    x: 0.5,
+                    y: 0.5
+                },
+                easing: "sway",
+                duration: 3000,
+                stiffness: 1
+            })
+            .translate({
+                from: {
+                    x: 0,
+                    y: 0
+                },
+                to: {
+                    x: 0,
+                    y: 0
+                },
+                easing: "bounce",
+                duration: 3000,
+            })
 
+            .applyTo(document.querySelectorAll(".address_tab"));
 
+    })
+
+    //bounceJS for password tab
+    $('.password_tab').click(function () {
+
+        var bounce = new Bounce();
+        bounce
+            .rotate({
+                from: 0,
+                to: 0,
+                duration: 3000,
+                stiffness: 1
+            })
+            .scale({
+                from: {
+                    x: 1,
+                    y: 1
+                },
+                to: {
+                    x: 0.5,
+                    y: 0.5
+                },
+                easing: "sway",
+                duration: 3000,
+                stiffness: 1
+            })
+            .translate({
+                from: {
+                    x: 0,
+                    y: 0
+                },
+                to: {
+                    x: 0,
+                    y: 0
+                },
+                easing: "bounce",
+                duration: 3000,
+            })
+
+            .applyTo(document.querySelectorAll(".password_tab"));
+
+    })
 
 
 });
