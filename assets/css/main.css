@@ -253,7 +253,8 @@ html {
 
     }
 
-    #name_input {
+    #name_input,
+    #address_input {
         position: absolute;
         top: 14%;
         width: 60%;
@@ -263,22 +264,24 @@ html {
         color: #fff;
         text-align: center;
 
-        opacity: 0;
+        display: none;
     }
 
-    #save_info {
+    #save_info,
+    #save_info_address {
         position: absolute;
         top: 22%;
         width: 100px;
-        height: 30px;   
+        height: 30px;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         background-color: #181717;
         border: none;
         color: #EDC681;
+        z-index: 2;
 
-        opacity: 0;
+        display: none;
     }
 
     .fa-check-circle {
@@ -294,7 +297,7 @@ html {
         align-items: flex-end;
         justify-content: center;
 
-    
+
     }
 
     .register_btn {

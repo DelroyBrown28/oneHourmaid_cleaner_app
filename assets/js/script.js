@@ -262,81 +262,96 @@ $(document).ready(function () {
         })
     })
 
-    // Register form
 
+    // Opens input field for "Name" on register page
     $('.name_tab').click(function () {
         $('.register_tabs').animate({
             opacity: '0'
         }, function () {
-            $('#name_input').animate({
-                opacity: '1'
-            }, function () {
-                $('#save_info').animate({
-                    opacity: '1'
-                })
-            })
+            $('#name_input').fadeIn('fast', function () {
+                $('#save_info').fadeIn('slow');
+            });
         })
     })
 
+    // Saves name input
     $('#save_info').click(function () {
-        document.getElementById('save_info').innerHTML = "Saved!";
-    })
-
-    $('#save_info').click(function () {
-        $(this).delay(500).animate({
-            opacity: '0'
-        }, function () {
-            $('#name_input').animate({
-                opacity: '0'
-            }, function () {
+        document.getElementById('save_info').innerHTML = 'Saved!';
+        $('#save_info').delay(500).fadeOut('fast', function () {
+            $('#name_input').fadeOut('fast', function () {
                 $('.register_tabs').animate({
                     opacity: '1'
-                })
-            })
+                });
+            });
+        });
+    })
+
+    // Opens input field for "address" on register page
+    $('.address_tab').click(function () {
+        $('.register_tabs').animate({
+            opacity: '0'
+        }, function () {
+            $('#address_input').fadeIn('fast', function () {
+                $('#save_info_address').fadeIn('slow');
+            });
         })
     })
 
-        //bounceJS for slide down menu items
-        $('.name_tab').click(function () {
+    // Saves address input
+    $('#save_info_address').click(function () {
+        document.getElementById('save_info_address').innerHTML = 'Saved!';
+        $('#save_info_address').delay(500).fadeOut('fast', function () {
+            $('#address_input').fadeOut('fast', function () {
+                $('.register_tabs').animate({
+                    opacity: '1'
+                });
+            });
+        });
+    })
 
-            var bounce = new Bounce();
-            bounce
-                .rotate({
-                    from: 0,
-                    to: 0,
-                    duration: 3000,
-                    stiffness: 1
-                })
-                .scale({
-                    from: {
-                        x: 1,
-                        y: 1
-                    },
-                    to: {
-                        x: 0.5,
-                        y: 0.5
-                    },
-                    easing: "sway",
-                    duration: 3000,
-                    stiffness: 1
-                })
-                .translate({
-                    from: {
-                        x: 0,
-                        y: 0
-                    },
-                    to: {
-                        x: 0,
-                        y: 0
-                    },
-                    easing: "bounce",
-                    duration: 3000,
-                })
-    
-                .applyTo(document.querySelectorAll(".name_tab"));
-    
-        })
-    
+
+
+    //bounceJS for slide down menu items
+    $('.name_tab').click(function () {
+
+        var bounce = new Bounce();
+        bounce
+            .rotate({
+                from: 0,
+                to: 0,
+                duration: 3000,
+                stiffness: 1
+            })
+            .scale({
+                from: {
+                    x: 1,
+                    y: 1
+                },
+                to: {
+                    x: 0.5,
+                    y: 0.5
+                },
+                easing: "sway",
+                duration: 3000,
+                stiffness: 1
+            })
+            .translate({
+                from: {
+                    x: 0,
+                    y: 0
+                },
+                to: {
+                    x: 0,
+                    y: 0
+                },
+                easing: "bounce",
+                duration: 3000,
+            })
+
+            .applyTo(document.querySelectorAll(".name_tab"));
+
+    })
+
 
 
 
