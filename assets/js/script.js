@@ -341,6 +341,21 @@ $(document).ready(function () {
         });
     })
 
+    // Expands address field
+
+    $('#address_input').click(function() {
+        $(this).animate({
+            height: '150px'
+        })
+        $('#save_info_address').animate({
+            top: '37%'
+        })
+    })
+
+    // Displays cleaners name on account page
+
+    let setName = localStorage.getItem('nameKey');
+    document.getElementById('cleaners_name').innerHTML = `${setName}`;
 
 
 

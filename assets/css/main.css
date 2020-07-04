@@ -212,6 +212,8 @@ html {
 
     .top_contents__register {
         display: flex;
+        align-items: center;
+        justify-content: center;
         height: 15%;
         width: 100%;
 
@@ -225,6 +227,14 @@ html {
         color: #EDC681;
         margin: auto;
         text-align: center;
+
+    }
+
+    .back_btn {
+        position: absolute;
+        height: 25px;
+        left: 20px;
+        transition: 0.1s;
 
     }
 
@@ -1014,6 +1024,14 @@ html {
 
 .sign_out:active {
     opacity: 0.5;
+}
+
+.back_btn:active {
+    opacity: 0.5;
+    -webkit-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px);
+
 }
 
 
