@@ -311,7 +311,7 @@ $(document).ready(function () {
 
 
 
-    //bounceJS for slide down menu items
+    //bounceJS for name input
     $('.name_tab').click(function () {
 
         var bounce = new Bounce();
@@ -351,6 +351,50 @@ $(document).ready(function () {
             .applyTo(document.querySelectorAll(".name_tab"));
 
     })
+    
+        //bounceJS for address input
+        $('.address_tab').click(function () {
+
+            var bounce = new Bounce();
+            bounce
+                .rotate({
+                    from: 0,
+                    to: 0,
+                    duration: 3000,
+                    stiffness: 1
+                })
+                .scale({
+                    from: {
+                        x: 1,
+                        y: 1
+                    },
+                    to: {
+                        x: 0.5,
+                        y: 0.5
+                    },
+                    easing: "sway",
+                    duration: 3000,
+                    stiffness: 1
+                })
+                .translate({
+                    from: {
+                        x: 0,
+                        y: 0
+                    },
+                    to: {
+                        x: 0,
+                        y: 0
+                    },
+                    easing: "bounce",
+                    duration: 3000,
+                })
+    
+                .applyTo(document.querySelectorAll(".address_tab"));
+    
+        })
+    
+
+    
 
 
 
