@@ -12,56 +12,28 @@
 </head>
 
 <body id="register_page_body">
-    
+
     <!--TOP CONTENTS-->
     <div class="top_contents__register">
         <h1 class="main_title__register">Let's get you signed up</h1>
     </div>
     <!--// TOP CONTENTS-->
 
-    <!--REGISTER FORM-->
-    <div class="form_holder">
-        <form class="register_form">
-
-            <div class="first_name_wrap">
-                <h1 class="name_title">NAME</h1>
-                <input class="input_field" id="title__register" type="text" autocomplete="off" placeholder="title."
-                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'title.'">
-                <input class="input_field" id="first_name__register" type="text" autocomplete="off" placeholder="first."
-                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'first.'">
-                <input class="input_field" id="last_name__register" type="text" autocomplete="off" placeholder="last."
-                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'last.'">
-          
-                </div>
-
-            <div class="address_wrap">
-                <h1 class="name_title">ADDRESS</h1>
-                <input class="input_field" id="title__register" type="text" autocomplete="off"
-                    placeholder="street address" onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'street address'">
-                <input class="input_field" id="first_name__register" type="text" autocomplete="off"
-                    placeholder="postcode" onfocus="this.placeholder = ''" onblur="this.placeholder = 'postcode'">
-                <input class="input_field" id="last_name__register" type="text" autocomplete="off"
-                    placeholder="town/city" onfocus="this.placeholder = ''" onblur="this.placeholder = 'town/city'">
-            </div>
-
-            <div class="tools_wrap">
-                <h1 class="name_title">TOOLS</h1>
-                <textarea id="tools_input" placeholder="Let us know of any cleaning equipment you can use"
-                    onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'town/Let us know of any cleaning equipment you can use'"></textarea>
-            </div>
-        </form>
+    <!--REGISTER TABS-->
+    <div class="register_tab_wrap">
+        <div class="register_tabs name_tab">Name</div>
+        <div class="register_tabs address_tab">Address</div>
+        <div class="register_tabs tools_tab">Tools</div>
+        <div class="register_tabs vehicle_tab">Vehicle Details</div>
     </div>
-    <!--// REGISTER FORM-->
+    <!--// REGISTER TABS-->
 
-    <!--SIGN UP BUTTON-->
-    <div class="register_wrap">
-        <button id="register_button">REGISTER</button>
-        <div class="buttonclickstyle_two"></div>
-
+    <!--BOTTOM CONTENTS-->
+    <div class="register_btn_wrap">
+        <button class="register_btn">Register</button>
     </div>
-    <!--// SIGN UP BUTTON-->
+    <!--// BOTTOM CONTENTS-->
+
 
     <script src=" ./assets/js/jquery-3.5.1.min.js"> </script>
     <script src="./assets/js/script.js"></script>

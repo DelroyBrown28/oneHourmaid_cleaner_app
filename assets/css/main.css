@@ -16,6 +16,10 @@ html {
 
 }
 
+:root {
+    --border: 1px solid red;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -206,139 +210,70 @@ html {
     /*----------//  MAIN SIGN IN PAGE----------*/
     /*----------REGISTER PAGE----------*/
 
-    #register_page_body {
-        overflow: scroll;
-        display: block;
-
-    }
-
-    /*-----REGISTER PAGE TOP CONTENTS-----*/
-
     .top_contents__register {
-        width: 100%;
-        height: 15%;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        height: 15%;
+        width: 100%;
+
 
     }
 
     .main_title__register {
-        font-size: 22px;
-        font-weight: 300;
-        color: #EDC681;
-    }
-
-    /*-----//  REGISTER PAGE TOP CONTENTS-----*/
-    /*-----REGISTER FORM-----*/
-
-
-    .form_holder {
-        height: 80%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-flow: column;
-
-
-    }
-
-    .register_form {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-flow: column;
-
-
-    }
-
-    .first_name_wrap,
-    .address_wrap,
-    .tools_wrap {
-        width: 80%;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        border: 1px solid #fff;
-
-    }
-
-    .address_wrap {
-        margin: 15px;
-    }
-
-    .name_title {
-        position: relative;
-        color: #fff;
         margin: 0;
-        margin-bottom: 10px;
-        font-size: 15px;
-        color: #EDC681;
-        top: -11px;
-        padding: 2px 20px;
-        background-color: #15222A;
-    }
-
-
-    #first_name__register,
-    #last_name__register,
-    #title__register,
-    #tools_input {
-        background-color: transparent;
-        border: none;
-        height: 25px;
-        width: 80%;
-        text-align: center;
-        transition: 0.3s;
-        color: #fff;
         font-weight: 300;
-        resize: none;
+        font-size: 22px;
+        color: #EDC681;
+        margin: auto;
+        text-align: center;
 
     }
 
-    #first_name__register {
-        margin: 10px 0px;
-    }
-
-    #tools_input {
-        height: 110px;
-    }
-
-    ::placeholder {
-        color: #fff;
-        font-family: 'Lato', sans-serif;
-
-    }
-
-    /*-----//  REGISTER FORM-----*/
-    /*-----REGISTER BUTTON-----*/
-
-
-    .register_wrap {
+    /*-----REGISTER TABS-----*/
+    .register_tab_wrap {
+        height: 70%;
         width: 100%;
-        height: 15%;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-flow: column;
 
     }
 
-    #register_button {
-        background-color: transparent;
-        border: none;
-        width: 100%;
-        height: 100%;
+    .register_tabs {
+        width: 80%;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #EDC681;
         font-size: 18px;
         font-weight: 300;
+        background-color: #181717;
+        margin: 20px 0;
 
     }
 
+    /*-----//  REGISTER TABS-----*/
+    /*-----BOTTOM CONTENTS-----*/
+    .register_btn_wrap {
+        height: 15%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    /*-----//  REGISTER BUTTON-----*/
+    }
+
+    .register_btn {
+        width: inherit;
+        height: 100%;
+        background-color: #181717;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    /*-----//  BOTTOM CONTENTS-----*/
     /*----------//  REGISTER PAGE----------*/
 
 
@@ -735,7 +670,7 @@ html {
     }
 
     /*---SLIDE DOWN MENU ON CLEANER ACCOUNT PAGE---*/
-   
+
     .menu_list {
         height: 70%;
 
@@ -925,6 +860,7 @@ html {
     .show_hide_pw {
         margin-right: 28.3%;
     }
+
     .show_password,
     .hide_password {
         font-size: 0.8em;
@@ -1016,11 +952,12 @@ html {
 #last_name__register:focus,
 #title__register:focus {
     background-color: rgba(237, 197, 129, 0.479);
-    width: 100%;
+    width: 85%;
 }
 
 #tools_input:focus {
     background-color: rgba(237, 197, 129, 0.479);
+    width: 85%;
 }
 
 #open_calendar_btn:active {
