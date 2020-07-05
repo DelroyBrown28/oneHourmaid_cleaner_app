@@ -50,25 +50,15 @@ $(document).ready(function () {
         var signinInput = document.getElementById('email_input').value;
         var passwordInput = document.getElementById('password_input').value;
         if (signinInput == "" || passwordInput == "") {
-            alert("you need to sign in");
+            $('.sign_in_alert_box').fadeIn('fast', function () {
+                $('.sign_in_alert_box').delay(5000).fadeOut();
+            });
         } else {
             setTimeout(function () {
                 location.href = "cleaner_account.html";
             }, 500)
         }
     })
-
-    // REGISTER PAGE REGISTER BUTTON
-
-    $('#register_button').click(function () {
-        $('.buttonclickstyle_two').animate({
-            width: '100%'
-        }, 200, function () {
-            location.href = "#";
-        })
-    })
-
-
 
     // TOGGLES PASSWORD VIEW ON SIGN IN PAGE
 
@@ -77,14 +67,14 @@ $(document).ready(function () {
         if (PWInput == "") {
             return // stops toggle if input is empty
         }
-        $(this).fadeOut('slow', function () {
+        $(this).fadeOut('fast', function () {
             $('.hide_password').fadeIn();
         })
         $('#password_input').attr('type', 'text');
     })
 
     $('.hide_password').click(function () {
-        $(this).fadeOut('slow', function () {
+        $(this).fadeOut('fast', function () {
             $('.show_password').fadeIn();
         })
         $('#password_input').attr('type', 'password');
