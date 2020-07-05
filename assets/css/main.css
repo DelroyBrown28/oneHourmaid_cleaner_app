@@ -273,6 +273,7 @@ html {
         background-color: #1817177e;
         border: none;
         color: #fff;
+        font-weight: 300;
         text-align: center;
 
         display: none;
@@ -755,6 +756,8 @@ html {
 
 @media only screen and (min-width: 768px) {
 
+    /*----------MAIN SIGN IN PAGE----------*/
+
     .show_hide_pw {
         margin-right: 102px;
 
@@ -822,6 +825,43 @@ html {
         align-items: center;
         justify-content: center;
     }
+
+    /*----------//  MAIN SIGN IN PAGE----------*/
+    /*----------REGISTER PAGE----------*/
+    .main_title__register {
+        font-size: 30px;
+    }
+
+    .back_btn {
+        height: 35px;
+        left: 10%;
+    }
+
+    .register_tabs {
+        height: 70px;
+        font-size: 22px;
+    }
+
+    .register_btn {
+        font-size: 25px;
+    }
+
+    #name_input,
+    #address_input,
+    #password_input_register {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #save_info_name,
+    #save_info_address,
+    #save_info_password {
+        height: 50px;
+        width: 150px;
+        font-size: 18px;
+    }
+
+    /*----------//  REGISTER PAGE----------*/
 
 
 }
