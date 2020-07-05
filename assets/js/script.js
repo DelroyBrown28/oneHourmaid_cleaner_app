@@ -46,17 +46,16 @@ $(document).ready(function () {
 
 
     // SIGN IN PAGE SIGN IN BUTTON
-
     $('#sign_in_button').click(function () {
-        let signInButton = document.getElementById('email_input').value;
-        if (signInButton = "") {
-            return false;
+        var signinInput = document.getElementById('email_input').value;
+        var passwordInput = document.getElementById('password_input').value;
+        if (signinInput == "" || passwordInput == "") {
+            alert("you need to sign in");
+        } else {
+            setTimeout(function () {
+                location.href = "cleaner_account.html";
+            }, 500)
         }
-        $('.buttonclickstyle').animate({
-            width: '100%'
-        }, 200, function () {
-            location.href = "cleaner_account.html";
-        })
     })
 
     // REGISTER PAGE REGISTER BUTTON
@@ -343,7 +342,7 @@ $(document).ready(function () {
 
     // Expands address field
 
-    $('#address_input').click(function() {
+    $('#address_input').click(function () {
         $(this).animate({
             height: '150px'
         })

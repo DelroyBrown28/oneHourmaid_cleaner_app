@@ -17,7 +17,7 @@
 
     <!--TOP CONTENTS-->
     <div class="top_contents__register">
-         <img src="./assets/images/previous_arrow.png" alt="" class="back_btn" onclick="location.href = 'index.html'">
+         <img src="./assets/images/previous_arrow.png" alt="" class="back_btn">
          <h1 class="main_title__register">Let's get you signed up</h1>
     </div>
     <!--// TOP CONTENTS-->
@@ -64,6 +64,12 @@
     <script src="./assets/js/script.js"></script>
 
     <script>
+        $('.back_btn').click(function (e) {
+            e.preventDefault();
+            setTimeout(function (url) {
+                window.location = 'index.html';
+            }, 500, this.href);
+        });
     </script>
 
 </body>
