@@ -868,6 +868,8 @@ html {
 
 @media only screen and (min-width: 1024px) {
 
+    /*----------MAIN SIGN IN PAGE----------*/
+
     .main_title {
         font-size: 2.2em;
     }
@@ -934,6 +936,39 @@ html {
         align-items: center;
         justify-content: center;
     }
+
+    /*----------//  MAIN SIGN IN PAGE----------*/
+    /*----------REGISTER PAGE----------*/
+
+
+    .main_title__register {
+        font-size: 40px;
+    }
+
+    .back_btn {
+        height: 55px;
+    }
+
+    .register_tabs {
+        height: 100px;
+        font-size: 33px;
+    }
+
+    #name_input,
+    #address_input,
+    #password_input_register {
+        height: 70px;
+    }
+
+    #save_info_name,
+    #save_info_address,
+    #save_info_password {
+        height: 70px;
+        width: 200px;
+        font-size: 25px;
+    }
+
+    /*----------//  REGISTER PAGE----------*/
 
 
 
