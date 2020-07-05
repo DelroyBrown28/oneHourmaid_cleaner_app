@@ -50,7 +50,7 @@ $(document).ready(function () {
         var signinInput = document.getElementById('email_input').value;
         var passwordInput = document.getElementById('password_input').value;
         if (signinInput == "" || passwordInput == "") {
-            $('.sign_in_alert_box').fadeIn('fast', function () {
+            $('.sign_in_alert_box').fadeIn('fast', function() {
                 $('.sign_in_alert_box').delay(5000).fadeOut();
             });
         } else {
