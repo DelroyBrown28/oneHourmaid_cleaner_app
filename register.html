@@ -17,8 +17,8 @@
 
     <!--TOP CONTENTS-->
     <div class="top_contents__register">
-         <img src="./assets/images/previous_arrow.png" alt="" class="back_btn">
-         <h1 class="main_title__register">Let's get you signed up</h1>
+        <img src="./assets/images/previous_arrow.png" alt="" class="back_btn">
+        <h1 class="main_title__register">Let's get you signed up</h1>
     </div>
     <!--// TOP CONTENTS-->
 
@@ -34,21 +34,26 @@
             onblur="this.placeholder = 'Full address'">
 
         <div class="register_tabs password_tab">Password</div>
-        <input id="password_input_register" type="password" placeholder="Choose a password" type="password" onfocus="this.placeholder = ''"
-            onblur="this.placeholder = 'Choose a password'">
+        <input id="password_input_register" type="password" placeholder="Choose a password" type="password"
+            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Choose a password'">
 
         <div class="register_tabs tools_tab">Tools</div>
         <div class="register_tabs vehicle_tab">Vehicle Details</div>
 
         <button id="save_info_name">Save
-            <i class="far fa-check-circle"></i>
         </button>
         <button id="save_info_address">Save
-            <i class="far fa-check-circle"></i>
         </button>
         <button id="save_info_password">Save
-            <i class="far fa-check-circle"></i>
         </button>
+
+        <!--ENTER INFO ALERT-->
+        
+        <p id="save_info_alert">Please enter a username</p>
+        
+        <!--// ENTER INFO ALERT-->
+
+        <img src="./assets/images/register_cross.png" alt="" class="close_register">
     </div>
     <!--// REGISTER TABS-->
 

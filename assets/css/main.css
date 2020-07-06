@@ -332,8 +332,22 @@ html {
         display: none;
     }
 
-    .fa-check-circle {
-        display: none !important;
+
+    .close_register {
+        position: absolute;
+        top: 30%;
+        height: 20px;
+
+        display: none;
+        
+    }
+
+    #save_info_alert {
+        position: absolute;
+        color: red;
+        font-size: 18px;
+
+        display: none;
     }
 
     /*-----//  REGISTER TABS-----*/

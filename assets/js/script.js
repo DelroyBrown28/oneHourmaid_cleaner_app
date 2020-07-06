@@ -257,22 +257,40 @@ $(document).ready(function () {
             opacity: '0'
         }, function () {
             $('#name_input').fadeIn('fast', function () {
-                $('#save_info_name').fadeIn('slow');
+                $('#save_info_name').fadeIn('slow', function () {
+                    $('.close_register').fadeIn();
+                });
             });
         })
     })
+
+    // closes "name" input field
+
+    $('.close_register').click(function () {
+        $('#save_info_name').fadeOut('fast', function () {
+            $('#name_input, .close_register').fadeOut('fast', function () {
+                $('.register_tabs').animate({
+                    opacity: '1'
+                });
+            });
+        });
+    })
+
+
 
     // Saves "name" input value to localStorage
     document.getElementById('save_info_name').addEventListener('click', function () {
 
         let nameInput = document.getElementById('name_input').value;
         if (nameInput == "") {
-            alert('Please enter a Username');
+            $('#save_info_alert').fadeIn('fast', function () {
+                $('#save_info_alert').delay(5000).fadeOut();
+            });
         } else {
             localStorage.setItem('nameKey', nameInput);
             document.getElementById('save_info_name').innerHTML = 'Saved!';
             $('#save_info_name').delay(500).fadeOut('fast', function () {
-                $('#name_input').fadeOut('fast', function () {
+                $('#name_input, .close_register').fadeOut('fast', function () {
                     $('.register_tabs').animate({
                         opacity: '1'
                     });
@@ -287,8 +305,24 @@ $(document).ready(function () {
             opacity: '0'
         }, function () {
             $('#address_input').fadeIn('fast', function () {
-                $('#save_info_address').fadeIn('slow');
+                $('#save_info_address').fadeIn('slow', function () {
+                    $('.close_register').fadeIn();
+                });
             });
+        })
+    })
+
+
+    // Expands "address" field
+    $('#address_input').click(function () {
+        $(this).animate({
+            height: '150px'
+        })
+        $('#save_info_address').animate({
+            top: '37%'
+        })
+        $('.close_register').animate({
+            top: '44%'
         })
     })
 
@@ -298,12 +332,14 @@ $(document).ready(function () {
 
         let addressInput = document.getElementById('address_input').value;
         if (addressInput == "") {
-            alert('Please enter your address');
+            $('#save_info_alert').fadeIn('fast', function () {
+                $('#save_info_alert').delay(5000).fadeOut();
+            });
         } else {
             localStorage.setItem('addressKey', addressInput);
             document.getElementById('save_info_address').innerHTML = 'Saved!';
             $('#save_info_address').delay(500).fadeOut('fast', function () {
-                $('#address_input').fadeOut('fast', function () {
+                $('#address_input, .close_register').fadeOut('fast', function () {
                     $('.register_tabs').animate({
                         opacity: '1'
                     });
@@ -312,23 +348,51 @@ $(document).ready(function () {
         }
     })
 
+    // closes "address" input field
+    $('.close_register').click(function () {
+        $('#save_info_address').fadeOut('fast', function () {
+            $('#address_input, .close_register').fadeOut('fast', function () {
+                $('.register_tabs').animate({
+                    opacity: '1'
+                });
+            });
+        });
+    })
+
+
     // Opens input field for "password" on register page
     $('.password_tab').click(function () {
         $('.register_tabs').animate({
             opacity: '0'
         }, function () {
             $('#password_input_register').fadeIn('fast', function () {
-                $('#save_info_password').fadeIn('slow');
+                $('#save_info_password').fadeIn('slow', function () {
+                    $('.close_register').fadeIn();
+                });
             });
         })
     })
+
+    // closes "password" input field
+    $('.close_register').click(function () {
+        $('#save_info_password').fadeOut('fast', function () {
+            $('#password_input_register, .close_register').fadeOut('fast', function () {
+                $('.register_tabs').animate({
+                    opacity: '1'
+                });
+            });
+        });
+    })
+
 
     // Saves "password" input value to localStorage
     document.getElementById('save_info_password').addEventListener('click', function () {
 
         let passwordInput = document.getElementById('password_input_register').value;
         if (passwordInput == "") {
-            alert('Please enter a password');
+            $('#save_info_alert').fadeIn('fast', function () {
+                $('#save_info_alert').delay(5000).fadeOut();
+            });
         } else {
             localStorage.setItem('passwordKey', passwordInput);
             document.getElementById('save_info_password').innerHTML = 'Saved!';
@@ -342,16 +406,6 @@ $(document).ready(function () {
         }
     })
 
-    // Expands address field
-
-    $('#address_input').click(function () {
-        $(this).animate({
-            height: '150px'
-        })
-        $('#save_info_address').animate({
-            top: '37%'
-        })
-    })
 
     // Displays cleaners name on account page
 
