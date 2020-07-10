@@ -38,6 +38,62 @@
             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Choose a password'">
 
         <div class="register_tabs tools_tab">Tools</div>
+
+        <div class="tools_list_wrap">
+
+            <div id="mop_tools_check" data-value="Mop & Bucket" class="checkbox_wrap mop_tools">
+                <span class="checkbox">
+                    <span class="check mop_check">
+                        <img src="./assets/images/tick.png" alt="" class="tick_icon mop_tick_icon">
+                    </span>
+                </span>
+                <p class="tool_item_title" id="mop_title">Mop & Bucket</p>
+                <img src="./assets/images/mopcheckboxicon.png" alt="" class="tool_icons mop_icon">
+
+            </div>
+
+            <div id="sponge_tools_check" data-value="Sponges, Sprays & Cloths" class="checkbox_wrap sponges_tools">
+                <span class="checkbox">
+                    <span class="check sponges_check">
+                        <img src="./assets/images/tick.png" alt="" class="tick_icon sponges_tick_icon">
+                    </span>
+                </span>
+                <p class="tool_item_title" id="sponges_title">Sponges, Sprays & Cloths</p>
+                <img src="./assets/images/spongecheckboxicon.png" alt="" class="tool_icons sponges_icon">
+
+            </div>
+            <div class="checkbox_wrap">
+                <span class="checkbox">
+                    <span class="check"></span>
+                </span>
+                <p class="tool_item_title">Vacuum</p>
+                <img src="./assets/images/vacuumcheckboxicon.png" alt="" class="tool_icons vacuum_icon">
+
+            </div>
+            <div class="checkbox_wrap">
+                <span class="checkbox">
+                    <span class="check"></span>
+                </span>
+                <p class="tool_item_title">Carpet Steamer</p>
+                <img src="./assets/images/steamercheckboxicon.png" alt="" class="tool_icons steamer_icon">
+
+            </div>
+            <div class="checkbox_wrap">
+                <span class="checkbox">
+                    <span class="check"></span>
+                </span>
+                <p class="tool_item_title">Iron</p>
+                <img src="./assets/images/ironcheckboxicon.png" alt="" class="tool_icons iron_icon">
+
+            </div>
+
+            <!--MOP & BUCKET
+                SPONGES, SPRAYS & CLOTHS
+                VACUUM
+                CARPET STEAMER
+                IRON
+                -->
+        </div>
         <div class="register_tabs vehicle_tab">Vehicle Details</div>
 
         <button id="save_info_name">Save
@@ -48,9 +104,9 @@
         </button>
 
         <!--ENTER INFO ALERT-->
-        
+
         <p id="save_info_alert">Please enter a username</p>
-        
+
         <!--// ENTER INFO ALERT-->
 
         <img src="./assets/images/register_cross.png" alt="" class="close_register">

@@ -406,6 +406,58 @@ $(document).ready(function () {
         }
     })
 
+    // Opens input field for "tools" on register page
+    $('.tools_tab').click(function () {
+        $('.register_tabs').animate({
+            opacity: '0'
+        }, function () {
+            $('#password_input_register').fadeIn('fast', function () {
+                $('#save_info_password').fadeIn('slow', function () {
+                    $('.close_register').fadeIn();
+                });
+            });
+        })
+    })
+
+    // Picked "Mop & Bucket" in tools list
+
+    $('.mop_tools').click(function() {
+        $('.mop_check').animate({
+            height: '23px',
+            width: '23px'
+        }, 100)
+        $('.mop_icon').animate({
+            opacity: '0.3'
+        }, 100)
+        $('#mop_title').animate({
+            opacity: '0.3'
+        }, 100)
+        $('.mop_tick_icon').fadeIn();
+        $('.mop_tools').addClass('remove_shadow');
+        var mopBucket = $(this).attr('data-value');
+        localStorage.setItem('mopBucketKey', mopBucket);
+    })
+
+    // Picked "Sponges, sprays & cloths" in tools list
+
+    $('.sponges_tools').click(function() {
+        $('.sponges_check').animate({
+            height: '23px',
+            width: '23px'
+        }, 100)
+        $('.sponges_icon').animate({
+            opacity: '0.3'
+        }, 100)
+        $('#sponges_title').animate({
+            opacity: '0.3'
+        }, 100)
+        $('.sponges_tick_icon').fadeIn();
+        $('.sponges_tools').addClass('remove_shadow');
+        var sponges = $(this).attr('data-value');
+        localStorage.setItem('spongesKey', sponges);
+    })
+
+
 
     // Displays cleaners name on account page
 
