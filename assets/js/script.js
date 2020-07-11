@@ -421,7 +421,7 @@ $(document).ready(function () {
 
     // Picked "Mop & Bucket" in tools list
 
-    $('.mop_tools').click(function() {
+    $('.mop_tools').click(function () {
         $('.mop_check').animate({
             height: '23px',
             width: '23px'
@@ -440,7 +440,7 @@ $(document).ready(function () {
 
     // Picked "Sponges, sprays & cloths" in tools list
 
-    $('.sponges_tools').click(function() {
+    $('.sponges_tools').click(function () {
         $('.sponges_check').animate({
             height: '23px',
             width: '23px'
@@ -456,6 +456,66 @@ $(document).ready(function () {
         var sponges = $(this).attr('data-value');
         localStorage.setItem('spongesKey', sponges);
     })
+
+    // Picked "Vacuum" in tools list
+
+    $('.vacuum_tools').click(function () {
+        $('.vacuum_check').animate({
+            height: '23px',
+            width: '23px'
+        }, 100)
+        $('.vacuum_icon').animate({
+            opacity: '0.3'
+        }, 100)
+        $('#vacuum_title').animate({
+            opacity: '0.3'
+        }, 100)
+        $('.vacuum_tick_icon').fadeIn();
+        $('.vacuum_tools').addClass('remove_shadow');
+        var vacuum = $(this).attr('data-value');
+        localStorage.setItem('vacuumKey', vacuum);
+    })
+
+    // Picked "Carpet Steamer" in tools list
+
+    $('.steamer_tools').click(function () {
+        $('.steamer_check').animate({
+            height: '23px',
+            width: '23px'
+        }, 100)
+        $('.steamer_icon').animate({
+            opacity: '0.3'
+        }, 100)
+        $('#steamer_title').animate({
+            opacity: '0.3'
+        }, 100)
+        $('.steamer_tick_icon').fadeIn();
+        $('.steamer_tools').addClass('remove_shadow');
+        var steamer = $(this).attr('data-value');
+        localStorage.setItem('steamerKey', steamer);
+    })
+
+    // Picked "Iron" in tools list
+
+    $('.iron_tools').click(function () {
+        $('.iron_check').animate({
+            height: '23px',
+            width: '23px'
+        }, 100)
+        $('.iron_icon').animate({
+            opacity: '0.3'
+        }, 100)
+        $('#iron_title').animate({
+            opacity: '0.3'
+        }, 100)
+        $('.iron_tick_icon').fadeIn();
+        $('.iron_tools').addClass('remove_shadow');
+        var iron = $(this).attr('data-value');
+        localStorage.setItem('ironKey', iron);
+    })
+
+
+
 
 
 
