@@ -411,23 +411,41 @@ $(document).ready(function () {
         $('.register_tabs').animate({
             opacity: '0'
         }, function () {
-            $('#password_input_register').fadeIn('fast', function () {
-                $('#save_info_password').fadeIn('slow', function () {
-                    $('.close_register').fadeIn();
-                });
-            });
+            $('.tools_list_wrap').addClass('flex_box');
+            $('#mop_tools_check').animate({
+                opacity: '1'
+            }, 100, function () {
+                $('#sponge_tools_check').animate({
+                    opacity: '1'
+                }, 100, function () {
+                    $('#vacuum_tools_check').animate({
+                        opacity: '1'
+                    }, 100, function () {
+                        $('#steamer_tools_check').animate({
+                            opacity: '1'
+                        }, 100, function () {
+                            $('#iron_tools_check').animate({
+                                opacity: '1'
+                            }, 100, function () {
+                                $('.form_close_btn').addClass('close_button_animate');
+                                document.getElementById('main_title_swap').innerHTML = "What tools do you own?";
+                            })
+                        })
+                    })
+                })
+            })
         })
     })
 
     // Picked "Mop & Bucket" in tools list
-     $('.mop_tools').click(function () {
+    $('.mop_tools').click(function () {
         $('.mop_check').toggleClass('check_height');
         $('.mop_icon, #mop_title').toggleClass('check_opacity');
         $('.mop_tick_icon').fadeIn();
         $('.mop_tools').toggleClass('remove_shadow');
         var mopBucket = $(this).attr('data-value');
         localStorage.setItem('mopBucketKey', mopBucket);
-    }) 
+    })
 
 
     // Picked "Sponges, sprays & cloths" in tools list
