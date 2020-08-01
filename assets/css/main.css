@@ -12,7 +12,7 @@ html {
     -ms-flex-flow: column;
     flex-flow: column;
     font-family: 'Lato', sans-serif;
-    background-color: #15222A;
+    background-color: #181717;
 
 }
 
@@ -29,8 +29,21 @@ html {
 
 }
 
+.bolder_text {
+    font-weight: 600;
+}
+
+.larger_text {
+    font-size: 22px;
+}
+
 .gold_text {
     color: #EDC681;
+}
+
+.houdini {
+    display: none;
+    transition: 2s;
 }
 
 .bgChange {
@@ -63,84 +76,147 @@ html {
     height: 100px !important;
     transform: rotate(0deg) !important;
     bottom: 5% !important;
-    
+
 }
 
 @media only screen and (min-width : 320px) {
 
-
     /*----------MAIN SIGN IN PAGE----------*/
-    /*-----TOP CONTENTS-----*/
 
-    .top_contents {
+    .top_contents__cleaner {
         width: 100%;
         height: 15%;
         display: flex;
-        align-items: center;
-        justify-content: center;
 
     }
 
-    .main_title {
-        color: #EDC681;
-        font-size: 22px;
-        font-weight: 300;
+    .header_blurb {
+        color: #FFF;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        font-size: 18px;
     }
 
-    /*-----//  TOP CONTENTS-----*/
     /*-----SIGN IN FORM-----*/
 
-    .sign_in_form {
-        height: 70%;
+
+    #signin_form {
+        position: relative;
+        height: 100%;
         display: flex;
+        flex-flow: column;
         align-items: center;
         justify-content: center;
+
+
+    }
+
+    .input_wrap {
+        height: 40%;
+        width: 100%;
+        margin-bottom: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
         flex-flow: column;
 
     }
 
-    #email_input,
-    #password_input {
-        width: 78%;
-        height: 35px;
-        text-align: center;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #fff;
-        color: #fff;
+    .signin_form_inputs {
+        width: 80%;
+        height: 50px;
         font-size: 18px;
-        transition: 2s;
-
+        text-align: center;
+        border-radius: 50px;
+        margin-bottom: 15px;
+        color: #fff;
+        border: 1.5px solid #fff;
+        background-color: transparent;
     }
 
-    #password_input {
-        display: flex;
-        margin: 25px 0px 0px;
-
+    ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        font-size: 18px;
+        text-align: center;
     }
 
-    .show_hide_pw {
-        position: absolute;
-        margin-top: -10px;
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        font-size: 18px;
+        text-align: center;
+    }
+
+    :-ms-input-placeholder {
+        /* IE 10+ */
+        font-size: 18px;
+        text-align: center;
+    }
+
+    :-moz-placeholder {
+        /* Firefox 18- */
+        font-size: 18px;
+        text-align: center;
+    }
+
+
+
+    #google_signin_btn {
+        position: relative;
+        margin-top: 15px;
+        height: 45px;
+        width: 75%;
+        font-size: 15px;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-flow: column;
-        right: 33px;
-        width: 45px;
-        height: 35px;
+        border-radius: 100px;
+        background-color: #fff;
+        border: none;
+    }
 
+    .google_icon {
+        height: 30px;
+        position: absolute;
+        left: 15px;
+    }
+
+    #sign_in_btn {
+        position: absolute;
+        bottom: 0;
+        height: 15%;
+        width: 100%;
+        background-color: #15222A;
+        border: none;
+        color: #EDC681;
+        font-size: 20px;
+
+    }
+
+    .password_wrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #password_input {
+        position: relative;
     }
 
     .show_password,
     .hide_password {
         position: absolute;
-        color: #EDC681;
-        margin: 0;
-        font-weight: 300;
-        font-size: 0.7em;
-        z-index: 1;
-
+        right: 33px;
+        width: 25px;
+        height: 50px;
+        background-color: #fff;
+        transform: translateY(-8px);
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .hide_password {
@@ -148,119 +224,9 @@ html {
     }
 
 
-    ::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 15px;
-
-    }
-
-    ::-moz-placeholder {
-        /* Firefox 19+ */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 15px;
-
-    }
-
-    :-ms-input-placeholder {
-        /* IE 10+ */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 15px;
-
-    }
-
-    :-moz-placeholder {
-        /* Firefox 18- */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 15px;
-
-    }
-
-    .btn_to_register {
-        width: 78%;
-        height: 50px;
-        margin-top: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.1s;
-        background-color: #181717;
-        box-shadow:
-            0 2.8px 2.2px rgba(0, 0, 0, 0.07),
-            0 6.7px 5.3px rgba(0, 0, 0, 0.05),
-            0 12.5px 10px rgba(0, 0, 0, 0.042),
-            0 22.3px 17.9px rgba(0, 0, 0, 0.035),
-            0 41.8px 33.4px rgba(0, 0, 0, 0.028),
-            0 100px 80px rgba(0, 0, 0, 0.02);
-    }
-
-    .sign_up {
-        color: #fff;
-    }
-
-    /*-----SIGN IN BUTTON-----*/
-    .sign_in_alert_box {
-        position: absolute;
-        bottom: 25%;
-        width: 100%;
-
-        display: none;
-
-    }
-
-    .sign_in_alert {
-        color: red;
-        width: 100%;
-        text-align: center;
+    /*-----// SIGN IN FORM-----*/
 
 
-
-    }
-
-    /*-----//  SIGN IN BUTTON-----*/
-
-    /*-----//  SIGN IN FORM-----*/
-    /*-----SIGN IN BUTTON-----*/
-
-    .sign_in_btn_wrap {
-        height: 15%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    #sign_in_button {
-        width: 100%;
-        height: 100%;
-        border: none;
-        font-size: 18px;
-        font-weight: 300;
-        background-color: transparent;
-        color: #EDC681;
-        z-index: 1;
-    }
-
-    .buttonclickstyle {
-        position: absolute;
-        background-color: rgba(237, 197, 129, 0.267);
-        width: 0%;
-        height: 15%;
-        left: 0;
-    }
-
-
-
-    /*-----//  SIGN IN BUTTON-----*/
 
     /*----------//  MAIN SIGN IN PAGE----------*/
     /*----------REGISTER PAGE----------*/
@@ -942,77 +908,6 @@ html {
 
 @media only screen and (min-width: 768px) {
 
-    /*----------MAIN SIGN IN PAGE----------*/
-
-    .show_hide_pw {
-        margin-right: 102px;
-
-    }
-
-    .show_password,
-    .hide_password {
-        font-size: 1em;
-    }
-
-    #email_input,
-    #password_input {
-        height: 50px;
-        width: 65%;
-        font-size: 22px;
-
-    }
-
-    ::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 20px;
-
-    }
-
-    ::-moz-placeholder {
-        /* Firefox 19+ */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 20px;
-
-    }
-
-    :-ms-input-placeholder {
-        /* IE 10+ */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 20px;
-
-    }
-
-    :-moz-placeholder {
-        /* Firefox 18- */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 20px;
-
-    }
-
-    .btn_to_register {
-        width: 250px;
-        height: 55px;
-        font-size: 1.3em;
-
-    }
-
-    #sign_in_button {
-        font-size: 28px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /*----------//  MAIN SIGN IN PAGE----------*/
     /*----------REGISTER PAGE----------*/
     .main_title__register {
         font-size: 30px;
@@ -1054,76 +949,6 @@ html {
 
 @media only screen and (min-width: 1024px) {
 
-    /*----------MAIN SIGN IN PAGE----------*/
-
-    .main_title {
-        font-size: 2.2em;
-    }
-
-    #email_input,
-    #password_input {
-        height: 75px;
-        width: 60%;
-        font-size: 22px;
-        z-index: 1;
-
-
-    }
-
-    ::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 28px;
-
-    }
-
-    ::-moz-placeholder {
-        /* Firefox 19+ */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 28px;
-
-    }
-
-    :-ms-input-placeholder {
-        /* IE 10+ */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 28px;
-
-    }
-
-    :-moz-placeholder {
-        /* Firefox 18- */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 28px;
-
-    }
-
-    .show_hide_pw {
-        margin-right: 182px;
-
-    }
-
-    .show_password,
-    .hide_password {
-        font-size: 1.4em;
-    }
-
-    #sign_in_button {
-        font-size: 2.3em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /*----------//  MAIN SIGN IN PAGE----------*/
     /*----------REGISTER PAGE----------*/
 
 
@@ -1167,63 +992,6 @@ html {
 /*---Desktop / Laptop--*/
 @media only screen and (min-width: 1224px) {
 
-    .show_hide_pw {
-        margin-right: 28.3%;
-    }
-
-    .show_password,
-    .hide_password {
-        font-size: 0.8em;
-        cursor: pointer;
-    }
-
-    #email_input,
-    #password_input {
-        height: 50px;
-        width: 40%;
-        font-size: 20px;
-
-    }
-
-    ::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 20px;
-
-    }
-
-    ::-moz-placeholder {
-        /* Firefox 19+ */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 20px;
-
-    }
-
-    :-ms-input-placeholder {
-        /* IE 10+ */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 20px;
-
-    }
-
-    :-moz-placeholder {
-        /* Firefox 18- */
-        color: #fff;
-        text-align: center;
-        opacity: 0.7;
-        font-size: 20px;
-
-    }
-
-    #sign_in_button {
-        cursor: pointer;
-    }
 
 
 
