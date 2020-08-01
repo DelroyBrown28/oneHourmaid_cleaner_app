@@ -163,7 +163,6 @@ html {
 
     #google_signin_btn {
         position: relative;
-        margin-top: 15px;
         height: 45px;
         width: 75%;
         font-size: 15px;
@@ -173,7 +172,9 @@ html {
         border-radius: 100px;
         background-color: #fff;
         border: none;
+        transition: 0.1s;
     }
+
 
     .google_icon {
         height: 30px;
@@ -221,6 +222,17 @@ html {
 
     .hide_password {
         display: none;
+    }
+
+    .register_btn__cleaner {
+        width: 75%;
+        height: 45px;
+        border-radius: 100px;
+        background-color: #fff;
+        border: none;
+        color: #000;
+        font-weight: 600;
+        margin-top: 25px;
     }
 
 
@@ -999,15 +1011,6 @@ html {
 }
 
 
-
-
-
-
-
-
-
-
-
 /*-----HOVERS & SUCH-----*/
 
 .google_signin_button:active,
@@ -1067,6 +1070,10 @@ html {
 .btn_to_register:active,
 .register_tabs:active {
     box-shadow: none;
+}
+
+#google_signin_btn:active {
+    opacity: 0.3;
 }
 
 
