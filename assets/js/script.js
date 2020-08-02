@@ -81,6 +81,17 @@ $(document).ready(function () {
 
     })
 
+    // CHANGES BORDER COLOUR FOR INPUTS ON SIGN IN PAGE
+
+    $('.username_input').click(function() {
+        $(this).addClass('input_border');
+    })
+
+    $('#password_input').click(function() {
+        $(this).addClass('input_border');
+        $('.show_password').fadeIn();
+    })
+
 
 
     // SHOW PENDING JOBS
