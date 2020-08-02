@@ -192,6 +192,8 @@ html {
         color: #EDC681;
         font-size: 20px;
 
+        opacity: 0.3;
+
     }
 
     .password_wrap {
@@ -205,8 +207,7 @@ html {
         position: relative;
     }
 
-    .show_password,
-    .hide_password {
+    .show_password {
         position: absolute;
         right: 33px;
         width: 25px;
@@ -220,13 +221,10 @@ html {
         justify-content: center;
     }
 
-    .hide_password {
-        display: none;
-    }
-
     .fa-eye-slash {
         display: none;
     }
+
 
     .register_btn__cleaner {
         width: 75%;

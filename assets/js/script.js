@@ -62,7 +62,7 @@ $(document).ready(function () {
 
     // TOGGLES PASSWORD VIEW ON SIGN IN PAGE
 
-    $('.show_password').click(function () {
+    $('.fa-eye').click(function () {
         let PWInput = document.getElementById('password_input').value;
         if (PWInput == "") {
             return // stops toggle if input is empty
@@ -73,13 +73,14 @@ $(document).ready(function () {
         $('#password_input').attr('type', 'text');
     })
 
-    $('.hide_password').click(function () {
+    $('.fa-eye-slash').click(function () {
         $('.fa-eye-slash').fadeOut('fast', function () {
             $('.fa-eye').fadeIn();
         })
         $('#password_input').attr('type', 'password');
 
     })
+
 
 
     // SHOW PENDING JOBS
