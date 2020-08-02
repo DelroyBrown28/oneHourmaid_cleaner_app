@@ -67,15 +67,15 @@ $(document).ready(function () {
         if (PWInput == "") {
             return // stops toggle if input is empty
         }
-        $(this).fadeOut('fast', function () {
-            $('.hide_password').fadeIn();
+        $('.fa-eye').fadeOut('fast', function () {
+            $('.fa-eye-slash').fadeIn();
         })
         $('#password_input').attr('type', 'text');
     })
 
     $('.hide_password').click(function () {
-        $(this).fadeOut('fast', function () {
-            $('.show_password').fadeIn();
+        $('.fa-eye-slash').fadeOut('fast', function () {
+            $('.fa-eye').fadeIn();
         })
         $('#password_input').attr('type', 'password');
 
