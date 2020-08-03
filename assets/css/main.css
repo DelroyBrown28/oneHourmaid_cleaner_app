@@ -188,12 +188,10 @@ html {
         bottom: 0;
         height: 15%;
         width: 100%;
-        background-color: #15222A;
+        background-color: #EDC681;
         border: none;
-        color: #EDC681;
+        color: #000;
         font-size: 20px;
-
-        opacity: 0.3;
 
     }
 
@@ -925,6 +923,45 @@ html {
 
 @media only screen and (min-width: 768px) {
 
+
+    /*----------MAIN SIGN IN PAGE----------*/
+
+    .header_blurb {
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .welcome {
+        font-size: 25px;
+    }
+
+    /*-----SIGN IN FORM-----*/
+    .signin_form_inputs {
+        width: 55%;
+    }
+
+    #google_signin_btn,
+    .register_btn__cleaner {
+        width: 50%;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .register_btn__cleaner {
+        font-weight: 300;
+    }
+
+    .google_icon {
+        height: 35px;
+    }
+
+    #sign_in_btn {
+        font-size: 25px;
+    }
+
+    /*-----//  SIGN IN FORM-----*/
+    /*----------//  MAIN SIGN IN PAGE----------*/
+
     /*----------REGISTER PAGE----------*/
     .main_title__register {
         font-size: 30px;
@@ -967,8 +1004,6 @@ html {
 @media only screen and (min-width: 1024px) {
 
     /*----------REGISTER PAGE----------*/
-
-
     .main_title__register {
         font-size: 40px;
     }
@@ -996,18 +1031,119 @@ html {
         font-size: 25px;
     }
 
-
     /*----------//  REGISTER PAGE----------*/
 
+    .header_blurb {
+        font-size: 35px;
+    }
 
 
+    .welcome {
+        font-size: 40px;
+    }
 
+
+    /*-----SIGN IN FORM-----*/
+
+    .signin_form_inputs {
+        width: 55%;
+        height: 75px;
+
+    }
+
+    ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        font-size: 30px;
+        text-align: center;
+    }
+
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        font-size: 30px;
+        text-align: center;
+    }
+
+    :-ms-input-placeholder {
+        /* IE 10+ */
+        font-size: 30px;
+        text-align: center;
+    }
+
+    :-moz-placeholder {
+        /* Firefox 18- */
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #google_signin_btn,
+    .register_btn__cleaner {
+        width: 50%;
+        height: 80px;
+        font-size: 23px;
+    }
+
+    #sign_in_btn {
+        font-size: 35px;
+    }
+
+    /*-----//  SIGN IN FORM-----*/
 
 }
 
 
 /*---Desktop / Laptop--*/
-@media only screen and (min-width: 1224px) {}
+@media only screen and (min-width: 1224px) {
+
+    /*----------MAIN SIGN IN PAGE----------*/
+
+    .signin_form_inputs {
+        width: 25%;
+        height: 65px;
+    }
+
+    ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        font-size: 18px;
+        text-align: center;
+    }
+
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        font-size: 18px;
+        text-align: center;
+    }
+
+    :-ms-input-placeholder {
+        /* IE 10+ */
+        font-size: 18px;
+        text-align: center;
+    }
+
+    :-moz-placeholder {
+        /* Firefox 18- */
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #google_signin_btn,
+    .register_btn__cleaner {
+        width: 22%;
+        height: 65px;
+        font-size: 20px;
+    }
+
+    #sign_in_btn {
+        width: 20%;
+        height: 75px;
+        font-size: 20px;
+        margin-bottom: 50px;
+        border-radius: 100px;
+    }
+
+
+    /*----------//  MAIN SIGN IN PAGE----------*/
+
+}
 
 
 /*-----HOVERS & SUCH-----*/

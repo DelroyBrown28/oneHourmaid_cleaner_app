@@ -83,13 +83,32 @@ $(document).ready(function () {
 
     // CHANGES BORDER COLOUR FOR INPUTS ON SIGN IN PAGE
 
-    $('.username_input').click(function() {
+    $('#username_input').click(function () {
         $(this).addClass('input_border');
     })
 
-    $('#password_input').click(function() {
+    $('#password_input').click(function () {
         $(this).addClass('input_border');
         $('.show_password').fadeIn();
+    })
+
+    // FORM VALIDATION
+
+    const username = document.getElementById('username_input')
+    const password = document.getElementById('password_input')
+    const form = document.getElementById('signin_form')
+    const errorElement = document.getElementById('error')
+
+    form.addEventListener('submit', (e) => {
+        let messages = []
+        if (name.value == '' || name.value == null) {
+            messages.push('Name is required')
+        }
+
+        if (messages.length > 0) {
+            e.preventDefault
+        }
+            e.preventDefault()
     })
 
 

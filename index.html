@@ -14,22 +14,22 @@
 
     <!--TOP CONTENTS-->
     <div class="top_contents__cleaner">
-        <p class="header_blurb"><span class="gold_text larger_text">Welcome</span><br>Sign in to your account</p>
+        <p class="header_blurb"><span class="gold_text larger_text welcome">Welcome</span><br>Sign in to your account</p>
     </div>
     <!--TOP CONTENTS //-->
 
     <!--SIGN IN FORM-->
 
-
-    <form id="signin_form">
+    <div id="error"></div>
+    <form id="signin_form" action="/" method="GET">
 
         <div class="input_wrap">
-            <input class="signin_form_inputs username_input" type="text" placeholder="Username"
+            <input id="username_input" class="signin_form_inputs" name="username" type="text" placeholder="Username"
                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
             <div class="password_wrap">
 
-                <input id="password_input" class="signin_form_inputs" type="password" placeholder="Password"
-                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                <input id="password_input" class="signin_form_inputs" name="password" type="password"
+                    placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
                 <span class="show_password"><i class="fas fa-eye"></i>
                     <i class="fas fa-eye-slash"></i>
                 </span>
@@ -41,7 +41,7 @@
 
         </div>
 
-        <button id="sign_in_btn">SIGN IN</button>
+        <button id="sign_in_btn" type="submit">SIGN IN</button>
     </form>
 
 
