@@ -35,6 +35,11 @@ html {
     transition: 0.5s;
 }
 
+.expand_input {
+    transition: 0.5s;
+    height: 200px;
+}
+
 .bolder_text {
     font-weight: 600;
 }
@@ -254,17 +259,28 @@ html {
     /*-----TOP CONTENTS-----*/
 
     .top_contents__reg {
+        position: relative;
         width: 100%;
         height: 15%;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-flow: column;
 
     }
 
-    .head_blurb__reg {
+    .main_title__reg {
         font-size: 25px;
         font-weight: 400;
+        margin: 0;
+
+
+    }
+
+    .registered_blurb {
+        margin: 0;
+        font-weight: 300;
+        text-align: center;
 
     }
 
@@ -297,6 +313,8 @@ html {
         background-color: transparent;
         border: none;
         border-bottom: 1px solid #000;
+
+
     }
 
     .reg_inputs::placeholder {
@@ -304,6 +322,42 @@ html {
         font-size: 15px;
         text-align: left;
     }
+
+    #address_reg {
+        height: 45px;
+
+    }
+
+    .input_wraps {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    #username_reg,
+    #password_reg,
+    #confirm_pw_reg,
+    #address_reg {
+        z-index: 1;
+    }
+
+    .placeholder_labels {
+        position: absolute;
+        width: 0%;
+        left: 15%;
+        
+
+    }
+
+    .confirm_pw_label,
+    .address_label {
+        width: 130px;  
+
+    }
+
 
 
 

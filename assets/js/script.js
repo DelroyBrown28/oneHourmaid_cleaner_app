@@ -81,28 +81,7 @@ $(document).ready(function () {
 
     })
 
-    // CHANGES BORDER COLOUR FOR INPUTS ON SIGN IN PAGE
 
-    /*$('#username_input').click(function () {
-        $(this).addClass('input_border');
-    })
-
-    $('#password_input').click(function () {
-        $(this).addClass('input_border');
-        $('.show_password').fadeIn();
-    })*/
-
-    var username_input = document.getElementById('username_input')
-    var password_input = document.getElementById('password_input')
-
-    username_input.onfocus = function() {
-        $('#username_input').addClass('input_border')
-    }
-    password_input.onfocus = function() {
-        $('#password_input').addClass('input_border')
-    }
-
-    
 
     // FORM VALIDATION
 
@@ -120,7 +99,7 @@ $(document).ready(function () {
         if (messages.length > 0) {
             e.preventDefault
         }
-            e.preventDefault()
+        e.preventDefault()
     })
 
 

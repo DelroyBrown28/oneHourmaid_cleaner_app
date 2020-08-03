@@ -14,7 +14,8 @@
 
     <!--TOP CONTENTS-->
     <div class="top_contents__cleaner">
-        <p class="header_blurb"><span class="gold_text larger_text welcome">Welcome</span><br>Sign in to your account</p>
+        <p class="header_blurb"><span class="gold_text larger_text welcome">Welcome</span><br>Sign in to your account
+        </p>
     </div>
     <!--TOP CONTENTS //-->
 
@@ -51,6 +52,22 @@
     <script src="./assets/js/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="./assets/js/script.js"></script>
+
+    <script>
+        // CHANGES BORDER COLOUR FOR INPUTS ON SIGN IN PAGE
+
+        var username_input = document.getElementById('username_input')
+        var password_input = document.getElementById('password_input')
+        var address_input = document.getElementById('address_reg')
+
+
+        username_input.onfocus = function () {
+            $('#username_input').addClass('input_border')
+        }
+        password_input.onfocus = function () {
+            $('#password_input').addClass('input_border')
+        }
+    </script>
 
 </body>
 

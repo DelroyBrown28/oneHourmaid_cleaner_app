@@ -18,8 +18,10 @@
 
     <!--TOP CONTENTS-->
     <div class="top_contents__reg">
-        <h1 class="head_blurb__reg">Let's get you signed up</h1>
+        <h1 class="main_title__reg">Let's get you registered</h1>
     </div>
+    <p class="registered_blurb">In order to get you cleaning<br>we'll need a few details.</p>
+
     <!--TOP CONTENTS //-->
 
     <!--USER SIGN UP FORM-->
@@ -27,8 +29,24 @@
     <div class="reg_form_wrap">
 
         <form class="user_signup_form">
-            <input class="reg_inputs" id="username_reg" type="text" name="username_reg" placeholder="Username">
-            <input class="reg_inputs" id="password_reg" type="password" name="password_reg" placeholder="Password">
+
+            <div class="input_wraps">
+                <span class="username_label placeholder_labels">Username</span>
+                <input class="reg_inputs" id="username_reg" type="text" name="username_reg">
+            </div>
+            <div class="input_wraps">
+                <span class="password_label placeholder_labels">Password</span>
+                <input class="reg_inputs" id="password_reg" type="password" name="password_reg">
+            </div>
+            <div class="input_wraps">
+                <span class="confirm_pw_label placeholder_labels">Confirm password</span>
+                <input class="reg_inputs" id="confirm_pw_reg" type="password" name="confirm_pw_reg">
+            </div>
+            <div class="input_wraps">
+                <span class="address_label placeholder_labels">Full Address</span>
+                <input class="reg_inputs" id="address_reg" type="text" name="address_reg">
+            </div>
+
         </form>
     </div>
 
@@ -45,6 +63,75 @@
                 window.location = 'index.html';
             }, 500, this.href);
         });
+
+
+        // ANIMATES PLACEHOLDER ON REGISTER PAGE
+
+
+        var username_placeholder = document.getElementById('username_reg')
+        var password_placeholder = document.getElementById('password_reg')
+        var confirmPW_placeholder = document.getElementById('confirm_pw_reg')
+        var address_placeholder = document.getElementById('address_reg')
+
+        // Username Placeholder
+        username_placeholder.onfocus = function () {
+            $('.username_label').animate({
+                left: '63%',
+                opacity: '0'
+            })
+        }
+        username_placeholder.onblur = function () {
+            $('.username_label').animate({
+                left: '65%',
+                opacity: '0.5'
+            })
+        }
+
+        // Password Placeholder
+        password_placeholder.onfocus = function () {
+            $('.password_label').animate({
+                left: '63%',
+                opacity: '0'
+            })
+        }
+        password_placeholder.onblur = function () {
+            $('.password_label').animate({
+                left: '65%',
+                opacity: '0.5'
+            })
+        }
+
+        // Confirm password Placeholder
+        confirmPW_placeholder.onfocus = function () {
+            $('.confirm_pw_label').animate({
+                left: '63%',
+                opacity: '0'
+            })
+        }
+        confirmPW_placeholder.onblur = function () {
+            $('.confirm_pw_label').animate({
+                left: '50%',
+                opacity: '0.5'
+            })
+        }
+
+        // Address Placeholder
+        address_placeholder.onfocus = function () {
+            $('.address_label').animate({
+                left: '63%',
+                opacity: '0'
+            })
+            $('#address_reg').animate({
+                height: '200px'
+            })
+            
+        }
+        address_placeholder.onblur = function () {
+            $('#address_reg').animate({
+                height: '45px'
+            })
+
+        }
     </script>
 
 </body>
