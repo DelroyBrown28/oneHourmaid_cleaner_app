@@ -21,7 +21,6 @@
 
     <!--SIGN IN FORM-->
 
-    <div id="error"></div>
     <form id="signin_form" action="/" method="GET">
 
         <div class="input_wrap">
@@ -38,14 +37,12 @@
             <button id="google_signin_btn">
                 <img src="./assets/images/google_logo.png" alt="" class="google_icon">
                 Sign in with Google</button>
-            <button class="register_btn__cleaner">REGISTER</button>
+            <button id="register_btn__cleaner"><a href="./register.html">REGISTER</a></button>
 
         </div>
 
         <button id="sign_in_btn" type="submit">SIGN IN</button>
     </form>
-
-
 
     <!--SIGN IN FORM //-->
 
@@ -59,7 +56,6 @@
         var username_input = document.getElementById('username_input')
         var password_input = document.getElementById('password_input')
         var address_input = document.getElementById('address_reg')
-
 
         username_input.onfocus = function () {
             $('#username_input').addClass('input_border')

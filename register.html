@@ -49,23 +49,23 @@
 
             <div class="check_wrap">
                 <span class="tools_labels mop_label">Mop & Bucket</span>
-                <input type="button" value="Mop & Bucket" class="check_btns" id="mop_check_btn">
+                <input type="button" value="" class="check_btns" id="mop_check_btn">
             </div>
             <div class="check_wrap">
                 <span class="tools_labels sponges_label">Sponges & Sprays</span>
-                <input type="button" value="Sponges & Sprays" class="check_btns" id="sponges_check_btn">
+                <input type="button" data-value="Sponges" class="check_btns" id="sponges_check_btn">
             </div>
             <div class="check_wrap">
                 <span class="tools_labels vacuum_label">Vacuum Cleaner</span>
-                <input type="button" value="Vacuum Cleaner" class="check_btns" id="vacuum_check_btn">
+                <input type="button" value="" class="check_btns" id="vacuum_check_btn">
             </div>
             <div class="check_wrap">
                 <span class="tools_labels steamer_label">Carpet Steamer</span>
-                <input type="button" value="Carpet Steamer" class="check_btns" id="steamer_check_btn">
+                <input type="button" value="" class="check_btns" id="steamer_check_btn">
             </div>
             <div class="check_wrap">
                 <span class="tools_labels iron_label">Iron</span>
-                <input type="button" value="Iron" class="check_btns" id="iron_check_btn">
+                <input type="button" value="" class="check_btns" id="iron_check_btn">
             </div>
             <button type="submit" id="submit_reg_btn">Register</button>
 
@@ -148,6 +148,33 @@
             })
         }
 
+        // SUBMIT INFO FROM REGISTER PAGE
+
+        document.getElementById('submit_reg_btn').addEventListener("click", function () {
+            let username = document.getElementById('username_reg').value;
+            let password = document.getElementById('password_reg').value;
+            let confirmPassword = document.getElementById('confirm_pw_reg').value;
+
+            let mopTools = document.getElementById('mop_check_btn').value;
+            let spongesTools = document.getElementById('sponges_check_btn').value;
+            let vacuumTools = document.getElementById('vacuum_check_btn').value;
+            let steamerTools = document.getElementById('steamer_check_btn').value;
+            let ironTools = document.getElementById('iron_check_btn').value;
+
+            localStorage.setItem('usernameKey', username);
+            localStorage.setItem('passwordKey', password);
+            localStorage.setItem('confirmPWKey', confirmPassword);
+            localStorage.setItem('mopToolsKey', mopTools);
+            localStorage.setItem('spongeToolsKey', spongesTools);
+            localStorage.setItem('vacuumToolsKey', vacuumTools);
+            localStorage.setItem('steamerToolsKey', steamerTools);
+            localStorage.setItem('ironToolsKey', ironTools);
+        })
+        $('#submit_reg_btn').click(function () {
+            setTimeout(function () {
+                location.href = 'index.html';
+            })
+        })
     </script>
 
 </body>

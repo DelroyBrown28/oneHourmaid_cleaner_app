@@ -1,9 +1,6 @@
 $(document).ready(function () {
 
 
-
-
-
     function cleanerAppFadeIn() {
         $('#cleaners_avatar').animate({
             opacity: '1'
@@ -105,34 +102,6 @@ $(document).ready(function () {
         $('#iron_check_btn').addClass('button_checked')
         $('.iron_label').addClass('button_checked');
     })
-
-    // SUBMIT INFO FROM REGISTER PAGE
-
-    document.getElementById('submit_reg_btn').addEventListener("click", function () {
-        let username = document.getElementById('username_reg').value;
-        let password = document.getElementById('password_reg').value;
-        let confirmPassword = document.getElementById('confirm_pw_reg').value;
-
-        let mopTools = document.getElementById('mop_check_btn').value;
-        let spongesTools = document.getElementById('sponges_check_btn').value;
-        let vacuumTools = document.getElementById('vacuum_check_btn').value;
-        let steamerTools = document.getElementById('steamer_check_btn').value;
-        let ironTools = document.getElementById('iron_check_btn').value;
-        localStorage.setItem('usernameKey', username);
-        localStorage.setItem('passwordKey', password);
-        localStorage.setItem('confirmPWKey', confirmPassword);
-        localStorage.setItem('mopToolsKey', mopTools);
-        localStorage.setItem('spongeToolsKey', spongesTools);
-        localStorage.setItem('vacuumToolsKey', vacuumTools);
-        localStorage.setItem('steamerToolsKey', steamerTools);
-        localStorage.setItem('ironToolsKey', ironTools);
-    })
-    $('#submit_reg_btn').click(function () {
-        setTimeout(function () {
-            location.href = 'index.html';
-        })
-    })
-
 
 
     // SHOW PENDING JOBS
@@ -330,42 +299,6 @@ $(document).ready(function () {
     })
 
 
-
-    // Saves "name" input value to localStorage
-    document.getElementById('save_info_name').addEventListener('click', function () {
-
-        let nameInput = document.getElementById('name_input').value;
-        if (nameInput == "") {
-            $('#save_info_alert').fadeIn('fast', function () {
-                $('#save_info_alert').delay(5000).fadeOut();
-            });
-        } else {
-            localStorage.setItem('nameKey', nameInput);
-            document.getElementById('save_info_name').innerHTML = 'Saved!';
-            $('#save_info_name').delay(500).fadeOut('fast', function () {
-                $('#name_input, .close_register').fadeOut('fast', function () {
-                    $('.register_tabs').animate({
-                        opacity: '1'
-                    });
-                });
-            });
-        }
-    })
-
-    // Opens input field for "address" on register page
-    $('.address_tab').click(function () {
-        $('.register_tabs').animate({
-            opacity: '0'
-        }, function () {
-            $('#address_input').fadeIn('fast', function () {
-                $('#save_info_address').fadeIn('slow', function () {
-                    $('.close_register').fadeIn();
-                });
-            });
-        })
-    })
-
-
     // Expands "address" field
     $('#address_input').click(function () {
         $(this).animate({
@@ -380,305 +313,20 @@ $(document).ready(function () {
     })
 
 
-    // Saves "address" input value to localStorage
-    document.getElementById('save_info_address').addEventListener('click', function () {
+    // FADE IN FOR REGISTER PAGE
 
-        let addressInput = document.getElementById('address_input').value;
-        if (addressInput == "") {
-            $('#save_info_alert').fadeIn('fast', function () {
-                $('#save_info_alert').delay(5000).fadeOut();
-            });
-        } else {
-            localStorage.setItem('addressKey', addressInput);
-            document.getElementById('save_info_address').innerHTML = 'Saved!';
-            $('#save_info_address').delay(500).fadeOut('fast', function () {
-                $('#address_input, .close_register').fadeOut('fast', function () {
-                    $('.register_tabs').animate({
-                        opacity: '1'
-                    });
-                });
-            });
-        }
-    })
-
-    // closes "address" input field
-    $('.close_register').click(function () {
-        $('#save_info_address').fadeOut('fast', function () {
-            $('#address_input, .close_register').fadeOut('fast', function () {
-                $('.register_tabs').animate({
-                    opacity: '1'
-                });
-            });
-        });
-    })
-
-
-    // Opens input field for "password" on register page
-    $('.password_tab').click(function () {
-        $('.register_tabs').animate({
-            opacity: '0'
-        }, function () {
-            $('#password_input_register').fadeIn('fast', function () {
-                $('#save_info_password').fadeIn('slow', function () {
-                    $('.close_register').fadeIn();
-                });
-            });
-        })
-    })
-
-    // closes "password" input field
-    $('.close_register').click(function () {
-        $('#save_info_password').fadeOut('fast', function () {
-            $('#password_input_register, .close_register').fadeOut('fast', function () {
-                $('.register_tabs').animate({
-                    opacity: '1'
-                });
-            });
-        });
-    })
-
-
-    // Saves "password" input value to localStorage
-    document.getElementById('save_info_password').addEventListener('click', function () {
-
-        let passwordInput = document.getElementById('password_input_register').value;
-        if (passwordInput == "") {
-            $('#save_info_alert').fadeIn('fast', function () {
-                $('#save_info_alert').delay(5000).fadeOut();
-            });
-        } else {
-            localStorage.setItem('passwordKey', passwordInput);
-            document.getElementById('save_info_password').innerHTML = 'Saved!';
-            $('#save_info_password').delay(500).fadeOut('fast', function () {
-                $('#password_input_register').fadeOut('fast', function () {
-                    $('.register_tabs').animate({
-                        opacity: '1'
-                    });
-                });
-            });
-        }
-    })
-
-    // Opens input field for "tools" on register page
-    $('.tools_tab').click(function () {
-        $('.register_tabs').animate({
-            opacity: '0'
-        }, function () {
-            $('.tools_list_wrap').addClass('flex_box');
-            $('#mop_tools_check').animate({
+    function registerPageFadeIn() {
+        $('.main_title__reg').animate({
+            opacity: '1'
+        }, function() {
+            $('.registered_blurb').animate({
                 opacity: '1'
-            }, 100, function () {
-                $('#sponge_tools_check').animate({
-                    opacity: '1'
-                }, 100, function () {
-                    $('#vacuum_tools_check').animate({
-                        opacity: '1'
-                    }, 100, function () {
-                        $('#steamer_tools_check').animate({
-                            opacity: '1'
-                        }, 100, function () {
-                            $('#iron_tools_check').animate({
-                                opacity: '1'
-                            }, 100, function () {
-                                $('.form_close_btn').addClass('close_button_animate');
-                                document.getElementById('main_title_swap').innerHTML = "What tools do you own?";
-                            })
-                        })
-                    })
-                })
             })
         })
-    })
-
-    // Picked "Mop & Bucket" in tools list
-    $('.mop_tools').click(function () {
-        $('.mop_check').toggleClass('check_height');
-        $('.mop_icon, #mop_title').toggleClass('check_opacity');
-        $('.mop_tick_icon').fadeIn();
-        $('.mop_tools').toggleClass('remove_shadow');
-        var mopBucket = $(this).attr('data-value');
-        localStorage.setItem('mopBucketKey', mopBucket);
-    })
+    }
+    window.onload = registerPageFadeIn
 
 
-    // Picked "Sponges, sprays & cloths" in tools list
-
-    $('.sponges_tools').click(function () {
-        $('.sponges_check').toggleClass('check_height');
-        $('.sponges_icon, #sponges_title').toggleClass('check_opacity');
-        $('.sponges_tick_icon').fadeIn();
-        $('.sponges_tools').addClass('remove_shadow');
-        var sponges = $(this).attr('data-value');
-        localStorage.setItem('spongesKey', sponges);
-    })
-
-    // Picked "Vacuum" in tools list
-
-    $('.vacuum_tools').click(function () {
-        $('.vacuum_check').toggleClass('check_height');
-        $('.vacuum_icon, #vacuum_title').toggleClass('check_opacity');
-        $('.vacuum_tick_icon').fadeIn();
-        $('.vacuum_tools').addClass('remove_shadow');
-        var vacuum = $(this).attr('data-value');
-        localStorage.setItem('vacuumKey', vacuum);
-    })
-
-    // Picked "Carpet Steamer" in tools list
-
-    $('.steamer_tools').click(function () {
-        $('.steamer_check').toggleClass('check_height');
-        $('.steamer_icon, #steamer_title').toggleClass('check_opacity');
-        $('.steamer_tick_icon').fadeIn();
-        $('.steamer_tools').toggleClass('remove_shadow');
-        var steamer = $(this).attr('data-value');
-        localStorage.setItem('steamerKey', steamer);
-    })
-
-    // Picked "Iron" in tools list
-
-    $('.iron_tools').click(function () {
-        $('.iron_check').toggleClass('check_height');
-        $('.iron_icon, #iron_title').toggleClass('check_opacity');
-        $('.iron_tick_icon').fadeIn();
-        $('.iron_tools').removeClass('remove_shadow');
-        var iron = $(this).attr('data-value');
-        localStorage.setItem('ironKey', iron);
-    })
-
-
-
-
-
-
-    // Displays cleaners name on account page
-
-    let setName = localStorage.getItem('nameKey');
-    document.getElementById('cleaners_name').innerHTML = `${setName}`;
-
-
-
-    //bounceJS for name tab
-    $('.name_tab').click(function () {
-
-        var bounce = new Bounce();
-        bounce
-            .rotate({
-                from: 0,
-                to: 0,
-                duration: 3000,
-                stiffness: 1
-            })
-            .scale({
-                from: {
-                    x: 1,
-                    y: 1
-                },
-                to: {
-                    x: 0.5,
-                    y: 0.5
-                },
-                easing: "sway",
-                duration: 3000,
-                stiffness: 1
-            })
-            .translate({
-                from: {
-                    x: 0,
-                    y: 0
-                },
-                to: {
-                    x: 0,
-                    y: 0
-                },
-                easing: "bounce",
-                duration: 3000,
-            })
-
-            .applyTo(document.querySelectorAll(".name_tab"));
-
-    })
-
-    //bounceJS for address tab
-    $('.address_tab').click(function () {
-
-        var bounce = new Bounce();
-        bounce
-            .rotate({
-                from: 0,
-                to: 0,
-                duration: 3000,
-                stiffness: 1
-            })
-            .scale({
-                from: {
-                    x: 1,
-                    y: 1
-                },
-                to: {
-                    x: 0.5,
-                    y: 0.5
-                },
-                easing: "sway",
-                duration: 3000,
-                stiffness: 1
-            })
-            .translate({
-                from: {
-                    x: 0,
-                    y: 0
-                },
-                to: {
-                    x: 0,
-                    y: 0
-                },
-                easing: "bounce",
-                duration: 3000,
-            })
-
-            .applyTo(document.querySelectorAll(".address_tab"));
-
-    })
-
-    //bounceJS for password tab
-    $('.password_tab').click(function () {
-
-        var bounce = new Bounce();
-        bounce
-            .rotate({
-                from: 0,
-                to: 0,
-                duration: 3000,
-                stiffness: 1
-            })
-            .scale({
-                from: {
-                    x: 1,
-                    y: 1
-                },
-                to: {
-                    x: 0.5,
-                    y: 0.5
-                },
-                easing: "sway",
-                duration: 3000,
-                stiffness: 1
-            })
-            .translate({
-                from: {
-                    x: 0,
-                    y: 0
-                },
-                to: {
-                    x: 0,
-                    y: 0
-                },
-                easing: "bounce",
-                duration: 3000,
-            })
-
-            .applyTo(document.querySelectorAll(".password_tab"));
-
-    })
 
 
 });

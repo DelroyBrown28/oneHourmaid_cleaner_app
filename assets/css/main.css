@@ -29,6 +29,10 @@ html {
 
 }
 
+.bgChange {
+    background-color: #EDC681;
+}
+
 .input_border {
     opacity: 1;
     border: 1.5px solid #EDC681 !important;
@@ -238,7 +242,7 @@ html {
         color: #000;
     }
 
-    .register_btn__cleaner {
+    #register_btn__cleaner {
         width: 75%;
         height: 45px;
         border-radius: 100px;
@@ -279,6 +283,7 @@ html {
         font-weight: 400;
         margin: 0;
 
+        opacity: 0;
 
     }
 
@@ -286,6 +291,8 @@ html {
         margin: 0;
         font-weight: 300;
         text-align: center;
+
+        opacity: 0;
 
     }
 
@@ -886,13 +893,13 @@ html {
     }
 
     #google_signin_btn,
-    .register_btn__cleaner {
+    #register_btn__cleaner {
         width: 50%;
         height: 60px;
         font-size: 18px;
     }
 
-    .register_btn__cleaner {
+    #register_btn__cleaner {
         font-weight: 300;
     }
 
@@ -1021,7 +1028,7 @@ html {
     }
 
     #google_signin_btn,
-    .register_btn__cleaner {
+    #register_btn__cleaner {
         width: 50%;
         height: 80px;
         font-size: 23px;
@@ -1071,7 +1078,7 @@ html {
     }
 
     #google_signin_btn,
-    .register_btn__cleaner {
+    #register_btn__cleaner {
         width: 22%;
         height: 65px;
         font-size: 20px;
