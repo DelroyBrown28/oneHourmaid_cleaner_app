@@ -102,6 +102,10 @@ $(document).ready(function () {
         e.preventDefault()
     })
 
+    // MOP & BUCKET CHECK BUTTON...REGISTER PAGE
+
+    
+
 
 
     // SHOW PENDING JOBS
