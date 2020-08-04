@@ -386,7 +386,7 @@ html {
         width: 80%;
         margin-top: 10px;
         display: flex;
-        
+
         opacity: 0;
 
     }
@@ -414,7 +414,19 @@ html {
             -5px -5px 11px #ffd88d;
     }
 
+    #submit_reg_btn {
+        width: 80%;
+        height: 15%;
+        margin-top: 20px;
+        background-color: #181717;
+        color: #EDC681;
+        font-size: 18px;
+        border: none;
 
+        opacity: 0;
+
+
+    }
 
     /*-----//  TOOLS-----*/
     /*-----//  REGISTER FORM-----*/
