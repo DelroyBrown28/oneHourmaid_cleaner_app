@@ -49,23 +49,23 @@
 
             <div class="check_wrap">
                 <span class="tools_labels mop_label">Mop & Bucket</span>
-                <input type="button" class="check_btns" id="mop_check_btn">
+                <input type="button" value="Mop & Bucket" class="check_btns" id="mop_check_btn">
             </div>
             <div class="check_wrap">
                 <span class="tools_labels sponges_label">Sponges & Sprays</span>
-                <input type="button" class="check_btns" id="sponges_check_btn">
+                <input type="button" value="Sponges & Sprays" class="check_btns" id="sponges_check_btn">
             </div>
             <div class="check_wrap">
                 <span class="tools_labels vacuum_label">Vacuum Cleaner</span>
-                <input type="button" class="check_btns" id="vacuum_check_btn">
+                <input type="button" value="Vacuum Cleaner" class="check_btns" id="vacuum_check_btn">
             </div>
             <div class="check_wrap">
                 <span class="tools_labels steamer_label">Carpet Steamer</span>
-                <input type="button" class="check_btns" id="steamer_check_btn">
+                <input type="button" value="Carpet Steamer" class="check_btns" id="steamer_check_btn">
             </div>
             <div class="check_wrap">
                 <span class="tools_labels iron_label">Iron</span>
-                <input type="button" class="check_btns" id="iron_check_btn">
+                <input type="button" value="Iron" class="check_btns" id="iron_check_btn">
             </div>
             <button type="submit" id="submit_reg_btn">Register</button>
 
@@ -97,6 +97,9 @@
 
         // Username Placeholder
         username_placeholder.onfocus = function () {
+            if (username_placeholder == "") {
+                return
+            }
             $('.username_label').animate({
                 left: '63%',
                 opacity: '0'
@@ -134,17 +137,17 @@
             $('.confirm_pw_label').animate({
                 left: '50%',
                 opacity: '0.5'
-            }, function() {
+            }, function () {
                 $('.tools_title, .tools_blurb').animate({
                     opacity: '1'
-                }, 200, function() {
+                }, 200, function () {
                     $('.check_wrap, #submit_reg_btn').animate({
                         opacity: '1'
                     })
                 })
             })
-
         }
+
     </script>
 
 </body>

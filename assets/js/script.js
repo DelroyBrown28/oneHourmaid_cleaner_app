@@ -2,6 +2,8 @@ $(document).ready(function () {
 
 
 
+
+
     function cleanerAppFadeIn() {
         $('#cleaners_avatar').animate({
             opacity: '1'
@@ -81,30 +83,55 @@ $(document).ready(function () {
 
     })
 
+    // FORM BUTTON CHECKED - REGISTER PAGE
 
-
-    // FORM VALIDATION
-
-    const username = document.getElementById('username_input')
-    const password = document.getElementById('password_input')
-    const form = document.getElementById('signin_form')
-    const errorElement = document.getElementById('error')
-
-    form.addEventListener('submit', (e) => {
-        let messages = []
-        if (name.value == '' || name.value == null) {
-            messages.push('Name is required')
-        }
-
-        if (messages.length > 0) {
-            e.preventDefault
-        }
-        e.preventDefault()
+    $('#mop_check_btn').click(function () {
+        $('#mop_check_btn').addClass('button_checked')
+        $('.mop_label').addClass('button_checked');
+    })
+    $('#sponges_check_btn').click(function () {
+        $('#sponges_check_btn').addClass('button_checked')
+        $('.sponges_label').addClass('button_checked');
+    })
+    $('#vacuum_check_btn').click(function () {
+        $('#vacuum_check_btn').addClass('button_checked')
+        $('.vacuum_label').addClass('button_checked');
+    })
+    $('#steamer_check_btn').click(function () {
+        $('#steamer_check_btn').addClass('button_checked')
+        $('.steamer_label').addClass('button_checked');
+    })
+    $('#iron_check_btn').click(function () {
+        $('#iron_check_btn').addClass('button_checked')
+        $('.iron_label').addClass('button_checked');
     })
 
-    // MOP & BUCKET CHECK BUTTON...REGISTER PAGE
+    // SUBMIT INFO FROM REGISTER PAGE
 
-    
+    document.getElementById('submit_reg_btn').addEventListener("click", function () {
+        let username = document.getElementById('username_reg').value;
+        let password = document.getElementById('password_reg').value;
+        let confirmPassword = document.getElementById('confirm_pw_reg').value;
+
+        let mopTools = document.getElementById('mop_check_btn').value;
+        let spongesTools = document.getElementById('sponges_check_btn').value;
+        let vacuumTools = document.getElementById('vacuum_check_btn').value;
+        let steamerTools = document.getElementById('steamer_check_btn').value;
+        let ironTools = document.getElementById('iron_check_btn').value;
+        localStorage.setItem('usernameKey', username);
+        localStorage.setItem('passwordKey', password);
+        localStorage.setItem('confirmPWKey', confirmPassword);
+        localStorage.setItem('mopToolsKey', mopTools);
+        localStorage.setItem('spongeToolsKey', spongesTools);
+        localStorage.setItem('vacuumToolsKey', vacuumTools);
+        localStorage.setItem('steamerToolsKey', steamerTools);
+        localStorage.setItem('ironToolsKey', ironTools);
+    })
+    $('#submit_reg_btn').click(function () {
+        setTimeout(function () {
+            location.href = 'index.html';
+        })
+    })
 
 
 

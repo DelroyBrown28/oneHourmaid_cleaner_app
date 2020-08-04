@@ -40,6 +40,11 @@ html {
     height: 200px;
 }
 
+.button_checked {
+    transition: 0.5s !important;
+    opacity: 0.3 !important;
+}
+
 .bolder_text {
     font-weight: 600;
 }
@@ -397,7 +402,7 @@ html {
         border: none;
         border: 1.5px solid #181717;
         background-color: transparent;
-        z-index: 1;
+        z-index: 5;
     }
 
     .tools_labels {
