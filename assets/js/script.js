@@ -325,8 +325,5 @@ $(document).ready(function () {
         })
     }
     window.onload = registerPageFadeIn
-
-
-
-
+    
 });

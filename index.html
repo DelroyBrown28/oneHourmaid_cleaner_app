@@ -24,15 +24,13 @@
     <form id="signin_form" action="/" method="GET">
 
         <div class="input_wrap">
-            <input id="username_input" class="signin_form_inputs" name="username" type="text" placeholder="Username"
-                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+            <div class="username_wrap">
+                <input id="username_input" class="signin_form_inputs" name="username" type="text">
+                <span class="username_label_signin">Username</span>
+            </div>
             <div class="password_wrap">
-
-                <input id="password_input" class="signin_form_inputs" name="password" type="password"
-                    placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
-                <span class="show_password"><i class="fas fa-eye"></i>
-                    <i class="fas fa-eye-slash"></i>
-                </span>
+                <input id="password_input" class="signin_form_inputs" name="password" type="password">
+                <span class="password_label_signin">Password</span>
             </div>
             <button id="google_signin_btn">
                 <img src="./assets/images/google_logo.png" alt="" class="google_icon">
@@ -51,7 +49,7 @@
     <script src="./assets/js/script.js"></script>
 
     <script>
-        // CHANGES BORDER COLOUR FOR INPUTS ON SIGN IN PAGE
+        // ANIMATION FOR SIGN IN PLACEHOLDERS
 
         var username_input = document.getElementById('username_input')
         var password_input = document.getElementById('password_input')
@@ -59,9 +57,32 @@
 
         username_input.onfocus = function () {
             $('#username_input').addClass('input_border')
+            $('.username_label_signin').animate({
+                left: '100%',
+                opacity: '0'
+            })
+        }
+        username_input.onblur = function () {
+            $('.username_label_signin').animate({
+                left: '75%',
+                opacity: '0.5'
+            })
+
+
         }
         password_input.onfocus = function () {
             $('#password_input').addClass('input_border')
+            $('.password_label_signin').animate({
+                left: '100%',
+                opacity: '0'
+            })
+
+        }
+        password_input.onblur = function () {
+            $('.password_label_signin').animate({
+                left: '75%',
+                opacity: '0.5'
+            })
         }
     </script>
 
