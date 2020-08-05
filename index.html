@@ -35,7 +35,7 @@
             <button id="google_signin_btn">
                 <img src="./assets/images/google_logo.png" alt="" class="google_icon">
                 Sign in with Google</button>
-            <button id="register_btn__cleaner"><a href="./register.html">REGISTER</a></button>
+            <button id="register_btn__cleaner">REGISTER</button>
 
         </div>
 
@@ -84,6 +84,16 @@
                 opacity: '0.5'
             })
         }
+
+        // REGISTER BUTTON
+
+        $('#register_btn__cleaner').click(function () {
+            $(this).animate({
+                width: '45px'
+            }, function() {
+                location.href = 'register.html';
+            })
+        });
     </script>
 
 </body>

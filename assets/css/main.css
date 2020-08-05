@@ -339,6 +339,7 @@ html {
         color: #000;
         font-weight: 600;
         margin-top: 25px;
+        z-index: 2;
     }
 
     .username_popup,
@@ -420,6 +421,22 @@ html {
 
         opacity: 0;
 
+    }
+
+    .back_button {
+        position: absolute;
+        width: 35px;
+        height: 40px;
+        top: 12%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #181717;
+        border: none;
+    }
+
+    .arrow_icon {
+        height: 25px;
     }
 
 

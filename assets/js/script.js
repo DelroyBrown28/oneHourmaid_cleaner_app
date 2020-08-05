@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+    
+
+    // BACK BUTTON ON REGISTER PAGE
+
+    $('.back_button').click(function() {
+        $(this).animate({
+            left: '-100px'
+        }, function() {
+            location.href = 'index.html';
+        })
+    })
+
+
     // VALIDATION FOR REGISTER FORM
 
     var passwordInput = document.getElementById('password_reg');
