@@ -80,6 +80,7 @@ $(document).ready(function () {
 
     })
 
+
     // FORM BUTTON CHECKED - REGISTER PAGE
 
     $('#mop_check_btn').click(function () {
@@ -318,12 +319,14 @@ $(document).ready(function () {
     function registerPageFadeIn() {
         $('.main_title__reg').animate({
             opacity: '1'
-        }, function() {
+        }, function () {
             $('.registered_blurb').animate({
                 opacity: '1'
             })
         })
     }
     window.onload = registerPageFadeIn
-    
+
+
+
 });

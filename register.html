@@ -24,6 +24,23 @@
 
     <!--TOP CONTENTS //-->
 
+    <!--REGISTER FORM INFO POP UPS-->
+
+    <div class="username_popup">
+        <p class="username_popup_text">Username must be between <span class="white_text">5-12 characters</span> and
+            contain <span class="white_text">2 numbers</span></p>
+    </div>
+    <div class="password_popup">
+        <p class="username_popup_text">Password must be between <span class="white_text">5-12 characters</span> and
+            contain <span class="white_text">2 symbols</span></p>
+    </div>
+    <div class="confirm_pw_popup">
+        <p class="username_popup_text">Please <span class="white_text">confirm</span> your password</p>
+    </div>
+
+
+    <!--REGISTER FORM INFO POP UPS //-->
+
     <!--USER SIGN UP FORM-->
 
     <div class="reg_form_wrap">
@@ -97,12 +114,11 @@
 
         // Username Placeholder
         username_placeholder.onfocus = function () {
-            if (username_placeholder == "") {
-                return
-            }
             $('.username_label').animate({
                 left: '63%',
                 opacity: '0'
+            }, function () {
+                $('.username_popup').fadeIn();
             })
         }
         username_placeholder.onblur = function () {
@@ -110,6 +126,7 @@
                 left: '65%',
                 opacity: '0.5'
             })
+            $('.username_popup').fadeOut();
         }
 
         // Password Placeholder
@@ -117,6 +134,8 @@
             $('.password_label').animate({
                 left: '63%',
                 opacity: '0'
+            }, function () {
+                $('.password_popup').fadeIn();
             })
         }
         password_placeholder.onblur = function () {
@@ -124,6 +143,8 @@
                 left: '65%',
                 opacity: '0.5'
             })
+            $('.password_popup').fadeOut();
+
         }
 
         // Confirm password Placeholder
@@ -131,14 +152,17 @@
             $('.confirm_pw_label').animate({
                 left: '63%',
                 opacity: '0'
+            }, function () {
+                $('.confirm_pw_popup').fadeIn();
             })
         }
         confirmPW_placeholder.onblur = function () {
             $('.confirm_pw_label').animate({
                 left: '50%',
                 opacity: '0.5'
-            }, function () {
-                $('.tools_title, .tools_blurb').animate({
+            })
+            $('.confirm_pw_popup').fadeOut('fast', function () {
+                $('.tools_title, tools_blurb').animate({
                     opacity: '1'
                 }, 200, function () {
                     $('.check_wrap, #submit_reg_btn').animate({
