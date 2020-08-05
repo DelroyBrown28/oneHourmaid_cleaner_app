@@ -25,20 +25,21 @@
     <!--TOP CONTENTS //-->
 
     <!--REGISTER FORM INFO POP UPS-->
-
     <div class="username_popup">
-        <p class="username_popup_text">Username must be between <span class="white_text">5-12 characters</span> and
-            contain <span class="white_text">2 numbers</span></p>
+        <p class="username_popup_text"></p>
     </div>
     <div class="password_popup">
-        <p class="username_popup_text">Password must be between <span class="white_text">5-12 characters</span> and
-            contain <span class="white_text">2 symbols</span></p>
+        <p class="username_popup_text">Password must contain:<br>
+
+            <span id="number" class="invalid">A number</span><br>
+            <span id="lowercase" class="invalid">A lowercase letter</span><br>
+            <span id="uppercase" class="invalid">An uppercase letter</span><br>
+            <span id="length" class="invalid">Minimum of 8 characters</span>
+        </p>
     </div>
     <div class="confirm_pw_popup">
         <p class="username_popup_text">Please <span class="white_text">confirm</span> your password</p>
     </div>
-
-
     <!--REGISTER FORM INFO POP UPS //-->
 
     <!--USER SIGN UP FORM-->
@@ -53,7 +54,8 @@
             </div>
             <div class="input_wraps">
                 <span class="password_label placeholder_labels">Password</span>
-                <input class="reg_inputs" id="password_reg" type="password" name="password_reg">
+                <input class="reg_inputs" id="password_reg" type="password" name="password_reg"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
             </div>
             <div class="input_wraps">
                 <span class="confirm_pw_label placeholder_labels">Confirm password</span>

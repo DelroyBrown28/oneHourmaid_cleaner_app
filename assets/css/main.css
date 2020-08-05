@@ -360,6 +360,17 @@ html {
         margin: 5px;
     }
 
+    .invalid {
+        color: #fff;
+        text-align: center;
+
+    }
+
+    .valid {
+        color: #EDC681;
+    }
+    
+
     /*-----// SIGN IN FORM-----*/
 
 
