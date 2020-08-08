@@ -370,7 +370,7 @@ html {
     .valid {
         color: #EDC681;
     }
-    
+
 
     /*-----// SIGN IN FORM-----*/
 
@@ -646,507 +646,132 @@ html {
 
 
 
-
     /*----------CLEANER ACCOUNT PAGE----------*/
 
-    /*-----SLIDE MENU-----*/
-
-    .full_menu {
-        position: absolute;
-        width: 100%;
-        height: 20px;
-        display: -webkit-box;
-        display: -ms-flexbox;
+    #cleaner_account_body {
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
+    }
+
+    /*-----TOP CONTENTS CLEANER ACCOUNT PAGE-----*/
+
+    .top_contents__account {
+        width: 100%;
+        display: flex;
+        align-items: center;
         justify-content: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: column;
         flex-flow: column;
-        background-color: #15222A;
-        opacity: 0.9;
-
-    }
-
-    .menu_list {
-        color: #000;
-        height: 65%;
-        width: 80%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-        justify-content: space-evenly;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-        flex-flow: column;
-
-        display: none;
-
-    }
-
-    .menu_list_icons {
-        margin-top: 15px;
-        color: #EDC681;
-    }
-
-    .fa-exclamation {
-        color: red;
-    }
-
-    .contact,
-    .payments,
-    .issues,
-    .sign_out {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-        flex-flow: column;
-        width: 100%;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        font-size: 1.5em;
-        font-weight: 200;
-
-    }
-
-    .sign_out {
-        color: #fff;
-        padding: 5px 0px;
-        width: 50%;
-        border-radius: 100px;
-        margin: auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: content;
-        -ms-flex-pack: content;
-        justify-content: content;
-        font-weight: 600;
-        font-size: 1.2em;
-        margin-top: 30px;
-        background-color: #000;
-    }
-
-    .payments {
-        margin: 30px 0px;
-    }
-
-
-    .close_button {
-        position: absolute;
-        width: 100%;
-        height: 15%;
-        bottom: 8%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-
-    }
-
-    .cross_icon {
-        height: 35px;
-        margin: auto;
-        display: none;
-    }
-
-    .show_menu {
-        position: absolute;
-        bottom: 0;
-        font-size: 13px;
-        font-weight: 200;
-        color: #EDC681;
-    }
-
-    /*-----//  SLIDE MENU-----*/
-    /*-----CLEANERS INFO-----*/
-
-    .cleaners_info_wrap {
-        position: relative;
-        width: 100%;
         margin-top: 50px;
-        display: -webkit-box;
-        display: -ms-flexbox;
+
+
+    }
+
+    #cleaners_avatar_border {
+        width: 70px;
+        height: 70px;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-        flex-flow: column;
-
-
-    }
-
-    .avatar_border {
-        width: 150px;
-        height: 63px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        border-radius: 100px;
-
-        border: 1.5px solid #EDC681;
-
-    }
-
-
-    #cleaners_avatar {
-        width: 50px;
-        height: 50px;
-        border-radius: 100px;
-        /*---opacity set to 0, resets to 1 through JS---*/
-        opacity: 0;
-
-    }
-
-    .avatar {
-        height: 50px;
-        border-radius: 100px;
-        -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-    }
-
-    .transform_rotate {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-        -webkit-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
-    }
-
-
-    #cleaners_name {
-        position: relative;
-        bottom: 120%;
-        color: #fff;
-        font-size: 22px;
-        font-weight: 200;
-        margin: 5px 0px;
-
-    }
-
-    .account_type {
-        width: 87px;
-        height: 20px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 10px;
-        font-weight: 200;
-        border-radius: 100px;
-        background-color: rgba(237, 197, 129, 0.418);
-
-    }
-
-    .cleaner_stats {
-        margin-top: 20px;
-        width: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-        justify-content: space-evenly;
-
-    }
-
-    .number_of_cleans_wrap,
-    .ratings_wrap {
-        position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-        flex-flow: column;
-
-    }
-
-    #number_of_cleans_text,
-    #ratings_text {
-        color: #fff;
-        font-size: 10px;
-        margin: 0;
-    }
-
-    .cleans_number,
-    .ratings_number {
-        color: #fff;
-        font-size: 25px;
-        font-weight: 200;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-
-    .star_rating {
-        height: 12px;
-        margin-bottom: 10px;
-    }
-
-
-    /*-----//  CLEANERS INFO-----*/
-    /*-----BOOKING DATES & CALENDAR-----*/
-
-
-    .calendar_wrap {
-        position: relative;
-        width: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        margin: auto;
-
-        display: none;
-
-    }
-
-    #myCalendar {
-        height: 85%;
-        width: 80%;
-        margin-top: 35px;
-        background-color: #15222A;
-        color: #fff;
-        font-weight: 200;
-        border: none;
-        opacity: 0.3;
-
-    }
-
-    .neumorphize {
-        opacity: 1 !important;
-        -webkit-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
-        border-radius: 0px;
-        background: -o-linear-gradient(305deg, #1a1919, #161515);
-        background: linear-gradient(145deg, #1a1919, #161515);
-        -webkit-box-shadow: 9px 9px 11px #161515,
-            -9px -9px 11px #1a1919;
-        box-shadow: 9px 9px 11px #161515,
-            -9px -9px 11px #1a1919;
-
-    }
-
-    .vanilla-calendar .vanilla-calendar-date--today {
-        color: #EDC681;
-
-    }
-
-    .vanilla-calendar-date--active {
-        cursor: pointer;
-        background-color: #fff;
-    }
-
-
-    .vanilla-calendar-date {
-        color: #fff;
-        font-size: 0.8em;
-        background-color: #181717 !important;
-    }
-
-    .vanilla-calendar-week {
-        color: #000;
-        font-size: 0.8em;
-        background-color: transparent !important;
-
-    }
-
-    .calnder_bg_color {
-        background-color: #fff !important;
-        color: #000 !important;
-    }
-
-
-
-    /*-----//  BOOKING DATES & CALENDAR-----*/
-    /*-----OPTIONS FOR CLEANER-----*/
-
-
-    .options_wrap,
-    .options_fade_wrap {
-        width: 100%;
-        height: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-        flex-flow: column;
-
-    }
-
-
-    #open_calendar_btn,
-    #jobs_btn,
-    #go_live_btn {
-        width: 85%;
-        height: 50px;
-        background-color: #242222;
-        border: none;
-        color: #fff;
-        font-size: 1.1em;
-        font-weight: 100;
-    }
-
-    #go_live_btn {
         border: 1px solid #EDC681;
-        background-color: transparent;
+
+    }
+
+    .cleaners_avater {
+        height: 60px;
+        width: 60px;
+        margin: auto;
+    }
+
+    #cleaners_username {
         color: #fff;
-        font-weight: 200;
+        margin-top: 10px;
+        font-size: 22px;
+        font-weight: 300;
     }
 
-    .close_button_wrap {
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        top: 38%;
-        right: 10px;
-        display: -webkit-box;
-        display: -ms-flexbox;
+    .cleaner_acc_tag {
+        width: 100px;
+        margin-top: 10px;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
-
-        display: none;
-
+        border-radius: 2px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 12px;
+        background-color: #edc58179;
     }
 
-    .close_button_icon {
-        height: 30px;
-    }
+    /*-----//  TOP CONTENTS CLEANER ACCOUNT PAGE-----*/
+    /*-----PENDING JOBS-----*/
 
-    .pending_jobs_wrap,
-    .pending_jobs_fadein_wrap {
-        position: absolute;
+    .text_wrap {
         width: 100%;
-        height: 85%;
-        display: -webkit-box;
-        display: -ms-flexbox;
+        margin-top: 30px;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: column;
         flex-flow: column;
-        background-color: #15222A;
-        margin-top: 40px;
-
 
     }
 
-    .pending_jobs_fadein_wrap {
-        display: none;
-    }
-
-
-    .pending_job {
-        width: 85%;
-        height: 50px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-        flex-flow: column;
-        background-color: #242222;
+    .pending_jobs_title {
         color: #fff;
-        margin: 10px 0px;
+        margin: 0;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .pending_jobs_num {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .pending_jobs_blurb {
+        color: #EDC681;
+        font-size: 15px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .pending_jobs_wrap {
+        width: 100%;
+        display: flex;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
 
     }
 
-    .close_button_pending_jobs {
-        position: absolute;
-        height: 25px;
-        bottom: 15px;
-        right: 15px;
+    .pending_job_cards {
+        width: 80%;
+        height: 50px;
+        margin-bottom: 15px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        background-color: #181717;
+        /*border: 1px solid #EDC681;*/
+        border-top: 1px solid #EDC681;
+        border-bottom: 1px solid #EDC681;
+
+        border-radius: 0px;
+        background: linear-gradient(225deg, #1a1919, #161515);
+        box-shadow: -5px 5px 0px #181717,
+            5px -5px 0px #181717;
     }
 
-    .view_on_map {
-        font-weight: 100;
+    #customer_info {
+        color: #fff;
     }
 
 
-    .calendar_icon {
-        height: 20px;
-    }
 
-    /*-----//  OPTIONS FOR CLEANER-----*/
+
+
+
+    /*-----//  PENDING JOBS-----*/
+
+
+
     /*----------//  CLEANER ACCOUNT PAGE----------*/
 }
 

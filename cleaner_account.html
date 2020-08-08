@@ -13,114 +13,50 @@
 
 <body id="cleaner_account_body">
 
-    <!--CLEANERS INFO-->
-    <div class="cleaners_info_wrap">
-        <div class="avatar_border">
-            <div id="cleaners_avatar">
-                <img src="./assets/images/fake_avatar.png" alt="" class="avatar">
-            </div>
+    <!--TOP CONTENTS-->
+    <div class="top_contents__account">
+
+        <div id="cleaners_avatar_border">
+            <img src="./assets/images/fake_avatar.png" alt="" class="cleaners_avater">
         </div>
 
-        <!--hard coded name for now-->
-        <p id="cleaners_name"></p>
-        <div class="account_type">Cleaner account</div>
+        <div id="cleaners_username">Sambrown55</div>
+        <span class="cleaner_acc_tag">Cleaner Account</span>
 
-        <!--amount of cleans cleaner has done will be
-            based off emails sent to him/her?-->
-        <div class="cleaner_stats">
-            <div class="number_of_cleans_wrap">
-                <small class="cleans_number">74</small>
-                <p id="number_of_cleans_text">CLEANS</p>
-            </div>
-            <div class="ratings_wrap">
-                <small class="ratings_number">4
-                    <img src="./assets/images/star.png" alt="" class="star_rating">
-                </small>
-                <p id="ratings_text">RATING</p>
-            </div>
-        </div>
     </div>
-    <!--// CLEANERS INFO-->
-
-    <!--SIDE_MENU-->
-
-    <div class="full_menu">
-        <div class="menu_list">
-            <div class="contact">CONTACT
-                <i class="fas menu_list_icons fa-phone-alt"></i>
-            </div>
-
-            <div class="payments">PAYMENTS
-                <i class="fas menu_list_icons fa-pound-sign"></i>
-            </div>
-
-            <div class="issues">ISSUES
-                <i class="fas menu_list_icons fa-exclamation"></i>
-            </div>
-
-            <div class="sign_out" onclick="location.href = 'index.html'">Sign out</div>
-        </div>
-
-        <div class="close_button">
-            <img src="./assets/images/cross_icon_black.png" alt="" class="cross_icon">
-        </div>
-
-        <div class="show_menu">SHOW MENU</div>
-    </div>
-
-    <!--// SIDE_MENU-->
-
-
-    <!--CALENDAR-->
-    <div class="calendar_wrap">
-        <div id="myCalendar" class="vanilla-calendar"></div>
-    </div>
-    <!--// CALENDAR-->
+    <!--TOP CONTENTS //-->
 
     <!--PENDING JOBS-->
-    <div class="pending_jobs_fadein_wrap">
-        <div class="pending_jobs_wrap">
 
-            <img src="./assets/images/closeicon.png" alt="" class="close_button_pending_jobs">
-
-            <div class="pending_job">247 Bowerdean Road
-                <small class="view_on_map gold_text">View on map</small>
-            </div>
-
-            <div class="pending_job">59 Alexandra Park
-                <small class="view_on_map gold_text">View on map</small>
-            </div>
-
-        </div>
+    <div class="text_wrap">
+        <h2 class="pending_jobs_title">Pending Jobs</h2>
+        <!--Number of jobs hard coded for now-->
+        <span class="pending_jobs_num">- 4 -</span>
+        <p class="pending_jobs_blurb">Tap job for more information or to contact<br>
+            the customer with any issues.</p>
     </div>
-    <!--// PENDING JOBS-->
 
-    <!--OPTIONS FOR CLEANER-->
-    <span class="close_button_wrap">
-        <img src="./assets/images/closeicon.png" alt="" class="close_button_icon">
-    </span>
-
-    <div class="options_wrap">
-        <div class="options_fade_wrap">
-            <button id="open_calendar_btn">
-                <img src="./assets/images/calendar.png" alt="" class="calendar_icon">
-            </button>
-
-            <button id="jobs_btn">View Pending Jobs <span class="number_of_pending_jobs">(<span
-                        class="gold_text">2</span>)</span></button>
-
-            <button id="go_live_btn">Go Live<span class="gold_text">!</span></button>
+    <div class="pending_jobs_wrap">
+        <div class="pending_job_cards pending_job_card1">
+            <span id="customer_info">59 Alexandra Park, Queen Alexandra Road...</span>
         </div>
+        <div class="pending_job_cards pending_job_card2">
+            <span id="customer_info">247 Bowerdean Road, High Wycombe...</span>
+        </div>
+        <div class="pending_job_cards pending_job_card3">
+            <span id="customer_info">86 Ambercrombie Avenue, Saint Marys...</span>
+        </div>
+        <div class="pending_job_cards pending_job_card4">
+            <span id="customer_info">155 Tunsbridge Lane, Aylesbury Vale...</span>
+        </div>
+
     </div>
-    <!--// OPTIONS FOR CLEANER-->
+
+
+    <!--PENDING JOBS //-->
+
     <script src="./assets/js/jquery-3.5.1.min.js"></script>
-    <script src="./assets/js/vanilla-calendar-min.js"></script>
-    <script src="./assets/js/calendar.js"></script>
-    <script src="./assets/js/bounce.min.js"></script>
     <script src="./assets/js/script.js"></script>
-
-
-
 </body>
 
 </html>
