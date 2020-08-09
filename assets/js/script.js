@@ -1,5 +1,21 @@
 $(document).ready(function () {
 
+    // SHOWS JOB INFO ON CLEANER ACCOUNT PAGE
+
+    $('.pending_job_card1').click(function() {
+        $('.pending_job_cards').fadeOut('fast', function() {
+            $('.customer_job_info').fadeIn('fast')
+        })
+    })
+
+    // CLOSES JOB INFO ON CLEANER ACCOUNT PAGE
+
+    $('.close_info').click(function() {
+        $('.customer_job_info').fadeOut('fast', function() {
+            $('.pending_job_cards').fadeIn('fast');
+        })
+    })
+
 
     // BACK BUTTON ON REGISTER PAGE
 

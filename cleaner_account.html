@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oneHourmaid - Cleaner Account</title>
-    <link rel="stylesheet" href="./assets/css/vanilla-calendar-min.css" type="text/css">
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
 
@@ -32,23 +31,80 @@
         <h2 class="pending_jobs_title">Pending Jobs</h2>
         <!--Number of jobs hard coded for now-->
         <span class="pending_jobs_num">- 4 -</span>
-        <p class="pending_jobs_blurb">Tap job for more information or to contact<br>
-            the customer with any issues.</p>
+        <p class="pending_jobs_blurb">Tap the <span class="white_text">eye icon</span> to view job details or<br> tap
+            the
+            <span class="white_text">pin icon</span> to add the job to the map.
+        </p>
     </div>
 
     <div class="pending_jobs_wrap">
         <div class="pending_job_cards pending_job_card1">
-            <span id="customer_info">59 Alexandra Park, Queen Alexandra Road...</span>
+            <span id="customer_info">59 Alexandra Park, Queen Alexandra...
+                <div class="view_job_icon">
+                    <i class="far fa-eye"></i>
+                </div>
+                <div class="view_job_icon">
+                    <i class="fas fa-map-pin"></i>
+                </div>
+            </span>
         </div>
         <div class="pending_job_cards pending_job_card2">
-            <span id="customer_info">247 Bowerdean Road, High Wycombe...</span>
+            <span id="customer_info">247 Bowerdean Road, High Wycombe...
+                <div class="view_job_icon">
+                    <i class="far fa-eye"></i>
+                </div>
+                <div class="view_job_icon">
+                    <i class="fas fa-map-pin"></i>
+                </div>
+
+            </span>
         </div>
         <div class="pending_job_cards pending_job_card3">
-            <span id="customer_info">86 Ambercrombie Avenue, Saint Marys...</span>
+            <span id="customer_info">86 Ambercrombie Avenue, Saint Marys...
+                <div class="view_job_icon">
+                    <i class="far fa-eye"></i>
+                </div>
+                <div class="view_job_icon">
+                    <i class="fas fa-map-pin"></i>
+                </div>
+
+            </span>
         </div>
         <div class="pending_job_cards pending_job_card4">
-            <span id="customer_info">155 Tunsbridge Lane, Aylesbury Vale...</span>
+            <span id="customer_info">155 Tunsbridge Lane, Aylesbury Vale...
+                <div class="view_job_icon">
+                    <i class="far fa-eye"></i>
+                </div>
+                <div class="view_job_icon">
+                    <i class="fas fa-map-pin"></i>
+                </div>
+
+            </span>
         </div>
+
+        <!--JOB INFO FROM CUSTOMER-->
+
+        <div class="customer_job_info">
+            <!--Hard coded for now-->
+            <span id="job_address">Customer address
+                <p id="customer_address">59 Alexandra Park, HP11 2HB</p>
+            </span>
+
+            <span id="job_type">Deep Clean
+                <p id="job_room_types">1 Bedroom, 2 Bathrooms</p>
+            </span>
+
+            <span id="job_message">Customer note
+                <p id="customer_message">Please bring a carpet steamer</p>
+            </span>
+
+            <div class="close_info">
+                <i class="fas fa-times"></i>
+            </div>
+
+        </div>
+
+        <!--JOB INFO FROM CUSTOMER //-->
 
     </div>
 
