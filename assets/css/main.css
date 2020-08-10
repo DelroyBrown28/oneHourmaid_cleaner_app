@@ -269,9 +269,10 @@ html {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        border-radius: 100px;
-        background-color: #fff;
+        background-color: transparent;
         border: none;
+        border: 1px solid #EDC681;
+        color: #fff;
         -webkit-transition: 0.1s;
         -o-transition: 0.1s;
         transition: 0.1s;
@@ -333,12 +334,12 @@ html {
     #register_btn__cleaner {
         width: 75%;
         height: 45px;
-        border-radius: 100px;
-        background-color: #fff;
+        background-color: transparent;
         border: none;
-        color: #000;
+        border: 1px solid #EDC681;
+        color: #fff;
         font-weight: 600;
-        margin-top: 25px;
+        margin-top: 10px;
         z-index: 2;
     }
 
